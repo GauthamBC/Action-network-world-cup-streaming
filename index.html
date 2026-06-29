@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,44 @@
 <meta name="description" content="An Action Network analysis ranking where minimum-wage workers have to work longest to stream the World Cup.">
 <style id="an-streaming-css">
   @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap');
-  #an-world-cup-streaming {
+  
+  /* Action Network iframe/page scrollbar */
+  html,
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: #00e6a8 #071515;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  html::-webkit-scrollbar-track,
+  body::-webkit-scrollbar-track {
+    background: #071515;
+    border-left: 1px solid rgba(0,230,168,.16);
+  }
+
+  html::-webkit-scrollbar-thumb,
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00e6a8 0%, #00785f 100%);
+    border: 2px solid #071515;
+    border-radius: 999px;
+  }
+
+  html::-webkit-scrollbar-thumb:hover,
+  body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #27ffd0 0%, #00a987 100%);
+  }
+
+  html::-webkit-scrollbar-corner,
+  body::-webkit-scrollbar-corner {
+    background: #071515;
+  }
+
+#an-world-cup-streaming {
     --an-green: #00e6a8;
     --an-green-soft: #dcfff5;
     --an-black: #050b0c;
@@ -842,7 +880,7 @@
     border: 1px solid var(--an-line);
     box-shadow: inset 0 0 0 1px rgba(0,230,168,.12);
     scrollbar-width: thin;
-    scrollbar-color: var(--an-green) #e6fff8;
+    scrollbar-color: var(--an-green) #071515;
   }
 
   #an-world-cup-streaming .an-chart-scroll {
