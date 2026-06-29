@@ -1,0 +1,3475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Action Network Data Study | World Cup Streaming Affordability</title>
+<meta name="description" content="An Action Network analysis ranking where minimum-wage workers have to work longest to stream the World Cup.">
+<style id="an-streaming-css">
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap');
+  #an-world-cup-streaming {
+    --an-green: #00e6a8;
+    --an-green-soft: #dcfff5;
+    --an-black: #050b0c;
+    --an-ink: #071515;
+    --an-text: #17252d;
+    --an-muted: #607179;
+    --an-line: #b8ded4;
+    --an-cream: #fbfffd;
+    --an-panel: #f4fffb;
+    --an-shadow: 0 16px 38px rgba(0,0,0,.08);
+    --an-display: 'Barlow Condensed', system-ui, sans-serif;
+    --an-sans: 'Source Serif 4', Georgia, serif;
+    --an-ui: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --an-page-pad: clamp(16px, 2.2vw, 32px);
+    --an-max: 1180px;
+  }
+#an-world-cup-streaming,
+  #an-world-cup-streaming * {
+    box-sizing: border-box;
+  }
+
+  #an-world-cup-streaming {
+    all: initial;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    isolation: isolate;
+    container-type: inline-size;
+    container-name: an-embed;
+    color: var(--an-text);
+    background: #fff;
+    font-family: var(--an-sans);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  #an-world-cup-streaming button,
+  #an-world-cup-streaming input,
+  #an-world-cup-streaming select {
+    font: inherit;
+  }
+
+  #an-world-cup-streaming a {
+    color: inherit;
+  }
+
+  #an-world-cup-streaming .an-wrap {
+    width: 100%;
+    margin: 0;
+    padding: 0 var(--an-page-pad);
+  }
+
+  #an-world-cup-streaming .an-intro {
+    width: 100%;
+    padding: clamp(22px, 3vw, 36px) var(--an-page-pad) clamp(18px, 2.5vw, 30px);
+  }
+
+  #an-world-cup-streaming .an-intro p {
+    max-width: 1060px;
+    margin: 0;
+    color: #1f2933;
+    font-size: clamp(16px, 1.2vw, 18px);
+    line-height: 1.72;
+  }
+
+  #an-world-cup-streaming .an-section {
+    width: 100%;
+    margin: 0;
+    padding: 0 var(--an-page-pad) clamp(22px, 2.5vw, 32px);
+  }
+
+  #an-world-cup-streaming .an-section-title {
+    margin: 0;
+    padding: clamp(18px, 2vw, 24px) clamp(18px, 2.4vw, 28px);
+    color: #fff;
+    font-family: var(--an-display);
+    font-size: clamp(30px, 4.2vw, 48px);
+    line-height: 1.02;
+    font-weight: 900;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    background:
+      radial-gradient(circle at 96% 16%, rgba(0,230,168,.28), transparent 34%),
+      linear-gradient(90deg, #050b0c 0%, #071515 58%, #003f36 100%);
+    border-bottom: 5px solid var(--an-green);
+  }
+
+  #an-world-cup-streaming .an-section-sub {
+    margin: 0;
+    padding: 16px clamp(18px, 2.4vw, 28px) 18px;
+    color: #27313c;
+    font-size: clamp(15px, 1.1vw, 17px);
+    line-height: 1.62;
+    background: #fff;
+    border: 1px solid var(--an-line);
+    border-top: 0;
+  }
+
+
+
+
+
+  /* Key findings */
+  #an-world-cup-streaming .an-key-findings,
+  #an-world-cup-streaming .an-key-findings *,
+  #an-world-cup-streaming .an-key-findings *::before,
+  #an-world-cup-streaming .an-key-findings *::after {
+    box-sizing: border-box;
+  }
+
+  #an-world-cup-streaming .an-key-findings {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0 var(--an-page-pad) clamp(24px, 3vw, 36px);
+    color: var(--an-text);
+    font-family: var(--an-sans);
+    text-align: left;
+  }
+
+  #an-world-cup-streaming .an-key-findings-inner {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--an-line);
+    border-left: 7px solid var(--an-green);
+    box-shadow: var(--an-shadow);
+  }
+
+  #an-world-cup-streaming .an-key-findings-head {
+    display: block;
+    position: relative;
+    min-height: 150px;
+    margin: 0;
+    padding: 34px 33px 36px;
+    overflow: hidden;
+    color: #fff;
+    background: linear-gradient(90deg, #050b0c 0%, #071d1c 58%, #003f36 100%);
+    border: 0;
+    box-shadow: none;
+    text-align: left;
+  }
+
+  #an-world-cup-streaming .an-key-findings-head .an-kicker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    margin: 0 0 17px;
+    padding: 0 14px;
+    background: var(--an-green);
+    color: #050b0c;
+    border: 0;
+    box-shadow: none;
+    font-family: var(--an-display);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  #an-world-cup-streaming .an-key-findings-head h2 {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: var(--an-display);
+    font-size: clamp(34px, 3.2vw, 44px);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .012em;
+    text-transform: uppercase;
+    text-align: left;
+    text-shadow: 1.4px 1.4px 0 rgba(0,230,168,.30), 2.5px 2.5px 0 rgba(0,0,0,.2);
+  }
+
+  #an-world-cup-streaming .an-key-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: clamp(14px, 2vw, 22px);
+    background: #f4fffb;
+  }
+
+  #an-world-cup-streaming .an-key-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 16px 18px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--an-line);
+    border-left: 6px solid var(--an-green);
+    text-align: left;
+  }
+
+  #an-world-cup-streaming .an-key-row::after {
+    content: "";
+    position: absolute;
+    right: -34px;
+    top: -38px;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    background: rgba(0,230,168,.12);
+    pointer-events: none;
+  }
+
+  #an-world-cup-streaming .an-key-rank {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    color: var(--an-green);
+    background: #050b0c;
+    font-family: var(--an-display);
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  #an-world-cup-streaming .an-key-copy {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    display: block;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  #an-world-cup-streaming .an-key-title {
+    display: block;
+    max-width: 980px;
+    margin: 0 0 5px;
+    padding: 0;
+    color: #111;
+    font-family: var(--an-display);
+    font-size: clamp(20px, 2vw, 28px);
+    line-height: 1.02;
+    font-weight: 900;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  #an-world-cup-streaming .an-key-text {
+    display: block;
+    width: 100%;
+    max-width: 980px;
+    margin: 0;
+    padding: 0;
+    color: #3f4854;
+    font-family: var(--an-sans);
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: left;
+    text-transform: none;
+  }
+
+  #an-world-cup-streaming .an-key-text strong {
+    color: #111;
+    font-weight: 800;
+  }
+
+  @container an-embed (max-width: 720px) {
+    #an-world-cup-streaming .an-key-findings-head {
+      min-height: 0;
+      padding: 28px 18px 30px;
+    }
+
+    #an-world-cup-streaming .an-key-findings-head h2 {
+      font-size: clamp(30px, 8cqw, 40px);
+    }
+
+    #an-world-cup-streaming .an-key-list {
+      gap: 9px;
+      padding: 12px;
+    }
+
+    #an-world-cup-streaming .an-key-row {
+      gap: 12px;
+      padding: 13px 12px;
+    }
+
+    #an-world-cup-streaming .an-key-rank {
+      flex-basis: 40px;
+      width: 40px;
+      height: 38px;
+      font-size: 20px;
+    }
+
+    #an-world-cup-streaming .an-key-title {
+      font-size: clamp(18px, 5.2cqw, 24px);
+    }
+
+    #an-world-cup-streaming .an-key-text {
+      font-size: 13px;
+      line-height: 1.45;
+    }
+  }
+
+  @container an-embed (max-width: 460px) {
+    #an-world-cup-streaming .an-key-row {
+      gap: 10px;
+    }
+
+    #an-world-cup-streaming .an-key-rank {
+      flex-basis: 34px;
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  /* Expert quote */
+  #an-world-cup-streaming .an-expert-quote {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0 var(--an-page-pad) clamp(24px, 3vw, 36px);
+  }
+
+  #an-world-cup-streaming .an-expert-quote-inner {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(22px, 3vw, 34px) clamp(20px, 3vw, 34px);
+    background:
+      radial-gradient(circle at 96% 4%, rgba(0,230,168,.14), transparent 18%),
+      linear-gradient(180deg, #ffffff 0%, #fbfffd 100%);
+    border: 1px solid var(--an-line);
+    border-left: 7px solid var(--an-green);
+    box-shadow: var(--an-shadow);
+  }
+
+  #an-world-cup-streaming .an-quote-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  #an-world-cup-streaming .an-quote-kicker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 0 12px;
+    background: #050b0c;
+    color: var(--an-green);
+    font-family: var(--an-display);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+  }
+
+  #an-world-cup-streaming .an-expert-quote blockquote {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    max-width: 1080px;
+    color: #121820;
+    font-size: clamp(17px, 1.45vw, 22px);
+    line-height: 1.62;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  #an-world-cup-streaming .an-quote-source {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 22px;
+    padding: 8px 12px;
+    color: #050b0c;
+    background: #f4fffb;
+    border: 1px solid #78e8c8;
+    border-left: 5px solid var(--an-green);
+    font-family: var(--an-display);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .075em;
+    text-transform: uppercase;
+  }
+
+  #an-world-cup-streaming .an-quote-source span {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--an-green);
+    box-shadow: 0 0 0 4px rgba(0,230,168,.22);
+  }
+
+  @container an-embed (max-width: 720px) {
+    #an-world-cup-streaming .an-expert-quote-inner {
+      padding: 22px 18px;
+    }
+
+    #an-world-cup-streaming .an-expert-quote blockquote {
+      font-size: clamp(16px, 4.2cqw, 20px);
+      line-height: 1.55;
+    }
+
+    #an-world-cup-streaming .an-quote-source {
+      font-size: 11px;
+      line-height: 1.1;
+    }
+  }
+
+
+  /* Calculator shrink protection */
+
+  #an-world-cup-streaming .an-calc-controls,
+  #an-world-cup-streaming .an-calc-result,
+  #an-world-cup-streaming .an-result-card,
+  #an-world-cup-streaming .an-state-visual,
+  #an-world-cup-streaming .an-select-wrap {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  #an-world-cup-streaming .an-state-card,
+  #an-world-cup-streaming .an-result-card {
+    overflow: hidden;
+  }
+
+  #an-world-cup-streaming .an-select-wrap select {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Calculator */
+  #an-world-cup-streaming .an-calculator {
+    padding: clamp(14px, 2vw, 22px);
+    background: #fff;
+    border: 1px solid var(--an-line);
+    border-left: 7px solid var(--an-green);
+    box-shadow: var(--an-shadow);
+  }
+
+  #an-world-cup-streaming .an-calc-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: clamp(12px, 1.7vw, 20px);
+    padding: clamp(12px, 2.1vw, 28px);
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  #an-world-cup-streaming .an-calc-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 0;
+    height: 100%;
+    padding: clamp(14px, 1.8vw, 18px);
+    background: linear-gradient(180deg, #fff 0%, #f4fffb 100%);
+    border: 1px solid var(--an-line);
+  }
+
+  #an-world-cup-streaming .an-field label {
+    display: block;
+    margin: 0 0 9px;
+    color: #003f36;
+    font-family: var(--an-display);
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .075em;
+    text-transform: uppercase;
+  }
+
+  #an-world-cup-streaming .an-select,
+  #an-world-cup-streaming .an-search {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid #9fdccf;
+    background: #fff;
+    color: #111;
+    font-family: var(--an-sans);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.25;
+    border-radius: 0;
+    outline: 0;
+  }
+
+  #an-world-cup-streaming .an-select:focus,
+  #an-world-cup-streaming .an-search:focus {
+    border-color: var(--an-green);
+    box-shadow: 0 0 0 3px rgba(0,230,168,.18);
+  }
+
+  #an-world-cup-streaming .an-state-visual {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 2px 0 0;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--an-line);
+    box-shadow: 0 8px 18px rgba(0,0,0,.04);
+  }
+
+  #an-world-cup-streaming .an-state-visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    flex: 1 1 auto;
+    object-fit: cover;
+    object-position: center;
+    background:
+      linear-gradient(135deg, #111, #003f36);
+  }
+
+  #an-world-cup-streaming .an-state-visual figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+    min-height: 0;
+    margin: 0;
+    padding: 12px 14px;
+    color: #374151;
+    background: #fbfffd;
+    border-top: 1px solid var(--an-line);
+    overflow: hidden;
+  }
+
+  #an-world-cup-streaming .an-state-visual strong {
+    display: block;
+    margin: 0 0 4px;
+    color: #111;
+    font-family: var(--an-display);
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  #an-world-cup-streaming #stateImageCaption {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    color: #374151;
+    font-size: 14px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  #an-world-cup-streaming .an-state-source {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 4px 0 0;
+    color: #006b57;
+    font-size: 10px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: .03em;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  #an-world-cup-streaming .an-calc-result {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(0, 1fr)) auto;
+    gap: 12px;
+    min-height: 0;
+    height: 100%;
+    align-content: stretch;
+  }
+
+  #an-world-cup-streaming .an-result-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0;
+    padding: clamp(16px, 1.8vw, 20px);
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--an-line);
+    border-top: 5px solid var(--an-green);
+  }
+
+  #an-world-cup-streaming .an-result-card::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -48px;
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    background: rgba(0,230,168,.14);
+    pointer-events: none;
+  }
+
+  #an-world-cup-streaming .an-result-card span {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: 0 0 10px;
+    color: #003f36;
+    font-family: var(--an-display);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .075em;
+    text-transform: uppercase;
+  }
+
+  #an-world-cup-streaming .an-result-card strong {
+    position: relative;
+    z-index: 1;
+    display: block;
+    color: #060606;
+    font-family: var(--an-display);
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: .95;
+    font-weight: 900;
+    letter-spacing: -.01em;
+  }
+
+  #an-world-cup-streaming .an-result-card.is-comparison strong {
+    font-size: clamp(28px, 3.2vw, 42px);
+  }
+
+  #an-world-cup-streaming .an-result-card.is-comparison strong em {
+    display: block;
+    margin-top: 9px;
+    color: #006b57;
+    font-size: .58em;
+    line-height: 1.08;
+    font-style: normal;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+  }
+
+  #an-world-cup-streaming .an-result-card small {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin-top: 10px;
+    color: #4f5864;
+    font-size: 13px;
+    line-height: 1.45;
+    font-weight: 700;
+  }
+
+  #an-world-cup-streaming .an-calc-sentence {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 16px 18px;
+    color: #f5f5f5;
+    background: #111;
+    border-left: 5px solid var(--an-green);
+    font-size: clamp(14px, 1.1vw, 16px);
+    line-height: 1.55;
+  }
+
+  /* Ranking */
+  #an-world-cup-streaming .an-rankings {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--an-line);
+    box-shadow: var(--an-shadow);
+  }
+
+  #an-world-cup-streaming .an-rankings-head {
+    position: relative;
+    min-height: 118px;
+    padding: clamp(22px, 2.4vw, 30px) clamp(18px, 2.4vw, 28px);
+    color: #fff;
+    background:
+      radial-gradient(circle at 96% 16%, rgba(0,230,168,.28), transparent 34%),
+      linear-gradient(90deg, #050b0c 0%, #071515 58%, #003f36 100%);
+    border-bottom: 5px solid var(--an-green);
+  }
+
+  #an-world-cup-streaming .an-kicker {
+    display: inline-flex;
+    margin: 0 0 10px;
+    padding: 7px 10px;
+    color: #050b0c;
+    background: var(--an-green);
+    font-family: var(--an-display);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  #an-world-cup-streaming .an-rankings-head h2 {
+    max-width: 820px;
+    margin: 0 0 10px;
+    color: #fff;
+    font-family: var(--an-display);
+    font-size: clamp(28px, 4vw, 46px);
+    line-height: 1.03;
+    font-weight: 900;
+    letter-spacing: .018em;
+    text-transform: uppercase;
+  }
+
+  #an-world-cup-streaming .an-rankings-head p {
+    max-width: 760px;
+    margin: 0;
+    color: #f1f1f1;
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
+
+  #an-world-cup-streaming .an-rankings-tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 16px clamp(18px, 2.4vw, 28px);
+    background: #fbfffd;
+    border-bottom: 1px solid var(--an-line);
+    flex-wrap: wrap;
+  }
+
+  #an-world-cup-streaming .an-tabs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  #an-world-cup-streaming .an-btn,
+  #an-world-cup-streaming .an-tab-btn {
+    appearance: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-family: var(--an-display);
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .055em;
+    text-transform: uppercase;
+  }
+
+  #an-world-cup-streaming .an-tab-btn {
+    padding: 15px 18px;
+    border: 1px solid var(--an-line);
+    background: #fff;
+    color: #111;
+  }
+
+  #an-world-cup-streaming .an-tab-btn.is-active {
+    color: #fff;
+    background: #202020;
+    border-color: #111;
+    box-shadow: inset 5px 0 0 var(--an-green);
+  }
+
+  #an-world-cup-streaming .an-btn {
+    padding: 15px 18px;
+    border: 1px solid #111;
+    background: #202020;
+    color: #fff;
+    box-shadow: inset 5px 0 0 var(--an-green);
+  }
+
+  #an-world-cup-streaming .an-btn:hover,
+  #an-world-cup-streaming .an-tab-btn:hover {
+    filter: brightness(.96);
+  }
+
+  #an-world-cup-streaming .an-panel {
+    display: none;
+    padding: clamp(14px, 1.8vw, 20px) clamp(18px, 2.4vw, 28px) 18px;
+    background: #fff;
+  }
+
+  #an-world-cup-streaming .an-panel.is-active {
+    display: block;
+  }
+
+  #an-world-cup-streaming .an-chart-scroll,
+  #an-world-cup-streaming .an-table-scroll {
+    width: 100%;
+    background: #fff;
+    border: 1px solid var(--an-line);
+    box-shadow: inset 0 0 0 1px rgba(0,230,168,.12);
+    scrollbar-width: thin;
+    scrollbar-color: var(--an-green) #e6fff8;
+  }
+
+  #an-world-cup-streaming .an-chart-scroll {
+    overflow-x: hidden;
+  }
+
+  #an-world-cup-streaming .an-table-scroll {
+    overflow-x: auto;
+  }
+
+  #an-world-cup-streaming .an-chart-scroll::-webkit-scrollbar,
+  #an-world-cup-streaming .an-table-scroll::-webkit-scrollbar {
+    height: 9px;
+  }
+
+  #an-world-cup-streaming .an-chart-scroll::-webkit-scrollbar-thumb,
+  #an-world-cup-streaming .an-table-scroll::-webkit-scrollbar-thumb {
+    background: var(--an-green);
+    border-radius: 999px;
+  }
+
+  #an-world-cup-streaming .an-chart {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    display: grid;
+    gap: 10px;
+    padding: clamp(10px, 1.6vw, 16px);
+    border: 1px solid var(--an-line);
+    overflow: hidden;
+  }
+
+  #an-world-cup-streaming .an-bar-row {
+    display: grid;
+    grid-template-columns: clamp(46px, 6.2cqw, 58px) minmax(118px, .95fr) minmax(80px, 1.25fr) clamp(42px, 6cqw, 64px);
+    align-items: center;
+    column-gap: clamp(10px, 1.6cqw, 16px);
+    row-gap: 4px;
+    min-height: clamp(48px, 6.5cqw, 58px);
+    padding: 6px clamp(6px, 1cqw, 10px);
+    overflow: hidden;
+  }
+
+  #an-world-cup-streaming .an-bar-row:nth-child(odd) {
+    background: #e6fff8;
+  }
+
+  #an-world-cup-streaming .an-rank-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 44px;
+    color: var(--an-green);
+    background: #050b0c;
+    font-family: var(--an-display);
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  #an-world-cup-streaming .an-state-label strong {
+    display: block;
+    color: #111;
+    font-family: var(--an-display);
+    font-size: 19px;
+    line-height: 1.08;
+    font-weight: 900;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+  }
+
+  #an-world-cup-streaming .an-state-label span {
+    display: block;
+    margin-top: 3px;
+    color: #5d6570;
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  #an-world-cup-streaming .an-track {
+    height: 34px;
+    overflow: hidden;
+    background: #d9f7ef;
+    border: 1px solid #9fdccf;
+  }
+
+  #an-world-cup-streaming .an-fill {
+    display: block;
+    height: 100%;
+    width: var(--bar-width, 0%);
+    min-width: 2px;
+    background: linear-gradient(90deg, #050b0c 0%, #003f36 48%, var(--an-green) 100%);
+    transform-origin: left center;
+    transform: scaleX(1);
+    will-change: transform;
+  }
+
+  #an-world-cup-streaming .an-fill.is-animating {
+    animation: viBarGrow 1100ms cubic-bezier(.16,.84,.24,1) both;
+  }
+
+  @keyframes viBarGrow {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+
+  #an-world-cup-streaming .an-hours {
+    color: #050b0c;
+    font-family: var(--an-display);
+    font-size: 29px;
+    line-height: 1;
+    font-weight: 900;
+    text-align: right;
+  }
+
+  #an-world-cup-streaming .an-table-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 12px 0 16px;
+    flex-wrap: wrap;
+  }
+
+  #an-world-cup-streaming .an-search {
+    max-width: 100%;
+  }
+
+  #an-world-cup-streaming .an-table-count {
+    color: #707070;
+    font-family: var(--an-display);
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  #an-world-cup-streaming .an-table {
+    width: 100%;
+    min-width: 880px;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+  }
+
+  #an-world-cup-streaming .an-table th:nth-child(1),
+  #an-world-cup-streaming .an-table td:nth-child(1) {
+    width: 10%;
+  }
+
+  #an-world-cup-streaming .an-table th:nth-child(2),
+  #an-world-cup-streaming .an-table td:nth-child(2) {
+    width: 27%;
+  }
+
+  #an-world-cup-streaming .an-table th:nth-child(3),
+  #an-world-cup-streaming .an-table td:nth-child(3) {
+    width: 16%;
+  }
+
+  #an-world-cup-streaming .an-table th:nth-child(4),
+  #an-world-cup-streaming .an-table td:nth-child(4) {
+    width: 19%;
+  }
+
+  #an-world-cup-streaming .an-table th:nth-child(5),
+  #an-world-cup-streaming .an-table td:nth-child(5) {
+    width: 14%;
+  }
+
+  #an-world-cup-streaming .an-table th:nth-child(6),
+  #an-world-cup-streaming .an-table td:nth-child(6) {
+    width: 14%;
+  }
+
+  #an-world-cup-streaming .an-table th {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: 16px 12px;
+    color: #fff;
+    background: linear-gradient(135deg, #050b0c, #252525);
+    border-right: 1px solid rgba(255,255,255,.12);
+    font-family: var(--an-display);
+    font-size: 14px;
+    line-height: 1.16;
+    font-weight: 900;
+    letter-spacing: .06em;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: normal;
+    cursor: pointer;
+  }
+
+  #an-world-cup-streaming .an-table th[data-tip] {
+    cursor: help;
+    text-decoration: underline dotted rgba(0,230,168,.65) 1px;
+    text-underline-offset: 4px;
+  }
+
+  #an-world-cup-streaming .an-table th[data-tip]::after {
+    content: "?";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+    margin-left: 7px;
+    color: var(--an-green);
+    background: rgba(0,230,168,.12);
+    border: 1px solid rgba(0,230,168,.62);
+    font-family: var(--an-sans);
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 900;
+    vertical-align: 1px;
+  }
+
+  #an-world-cup-streaming .an-table th:hover {
+    color: var(--an-green);
+  }
+
+  #an-world-cup-streaming .an-table td {
+    padding: 15px 12px;
+    color: #222;
+    border-top: 1px solid var(--an-line);
+    border-right: 1px solid rgba(222,211,179,.7);
+    font-size: 15px;
+    line-height: 1.35;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  #an-world-cup-streaming .an-table th:last-child,
+  #an-world-cup-streaming .an-table td:last-child {
+    border-right: 0;
+  }
+
+  #an-world-cup-streaming .an-table tbody tr:nth-child(even) td {
+    background: #fbfffd;
+  }
+
+  #an-world-cup-streaming .an-table tbody tr:hover td {
+    background: #e6fff8;
+  }
+
+  #an-world-cup-streaming .an-table tbody tr:last-child td {
+    border-bottom: 1px solid var(--an-line);
+  }
+
+  #an-world-cup-streaming .an-rank-cell,
+  #an-world-cup-streaming .an-hour-cell {
+    font-weight: 900;
+  }
+
+  #an-world-cup-streaming .an-state-cell strong {
+    display: block;
+    color: #111;
+    font-family: var(--an-sans);
+    font-size: 16px;
+    line-height: 1.1;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: none;
+    text-align: center;
+  }
+
+  #an-world-cup-streaming .an-tax-pill {
+    display: inline-flex;
+    min-width: 78px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    color: #006b57;
+    background: #d7fff3;
+    border: 1px solid #78e8c8;
+    font-weight: 900;
+    text-transform: capitalize;
+  }
+
+  #an-world-cup-streaming .an-table-bottom {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0 4px;
+  }
+
+  #an-world-cup-streaming .an-caption {
+    margin: 12px 0 0;
+    color: #607179;
+    font-size: 12.5px;
+    line-height: 1.45;
+    font-style: italic;
+  }
+
+  
+
+
+
+
+
+  /* Top 5 in focus */
+  #an-world-cup-streaming .an-top5-focus,
+  #an-world-cup-streaming .an-top5-focus *,
+  #an-world-cup-streaming .an-top5-focus *::before,
+  #an-world-cup-streaming .an-top5-focus *::after {
+    box-sizing: border-box;
+  }
+
+  #an-world-cup-streaming .an-top5-focus {
+    display: block;
+    width: 100%;
+    margin: 18px 0 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--an-line);
+    border-left: 7px solid var(--an-green);
+    box-shadow: var(--an-shadow);
+    color: var(--an-text);
+    font-family: var(--an-sans);
+    text-align: left;
+  }
+
+  #an-world-cup-streaming .an-top5-focus-head {
+    display: block;
+    margin: 0;
+    padding: 18px clamp(16px, 2.2vw, 24px);
+    background: linear-gradient(90deg, #050b0c 0%, #071d1c 58%, #003f36 100%);
+    color: #fff;
+    text-align: left;
+  }
+
+  #an-world-cup-streaming .an-focus-kicker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    margin: 0 0 10px;
+    padding: 0 13px;
+    background: var(--an-green);
+    color: #050b0c;
+    font-family: var(--an-display);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  #an-world-cup-streaming .an-focus-intro {
+    display: block;
+    max-width: 760px;
+    margin: 0;
+    padding: 0;
+    color: #e9fff8;
+    font-family: var(--an-sans);
+    font-size: 14px;
+    line-height: 1.45;
+    font-weight: 400;
+    text-align: left;
+    text-transform: none;
+  }
+
+  #an-world-cup-streaming .an-focus-card-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    background: #fff;
+  }
+
+  #an-world-cup-streaming .an-focus-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: clamp(16px, 2vw, 22px) clamp(16px, 2.2vw, 26px);
+    background: #fff;
+    border-top: 1px solid var(--an-line);
+    text-align: left;
+  }
+
+  #an-world-cup-streaming .an-focus-card:first-child {
+    border-top: 0;
+  }
+
+  #an-world-cup-streaming .an-focus-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 9px;
+    padding: 0;
+    color: #111;
+    font-family: var(--an-display);
+    font-size: clamp(22px, 2.35vw, 34px);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .018em;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  #an-world-cup-streaming .an-focus-title span {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;
+    margin: 0;
+    padding: 0 9px;
+    background: #050b0c;
+    color: var(--an-green);
+    font-size: .52em;
+    line-height: 1;
+    letter-spacing: .08em;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  #an-world-cup-streaming .an-focus-stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    margin: 0 0 10px;
+    padding: 0;
+    text-align: left;
+  }
+
+  #an-world-cup-streaming .an-focus-stats span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    margin: 0;
+    padding: 5px 8px;
+    color: #17252d;
+    background: #fbfffd;
+    border: 1px solid #b8ded4;
+    font-family: var(--an-sans);
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 700;
+    white-space: nowrap;
+    text-align: left;
+    text-transform: none;
+  }
+
+  #an-world-cup-streaming .an-focus-stats strong {
+    display: inline;
+    margin: 0 4px 0 0;
+    color: #00785f;
+    font-family: var(--an-display);
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .02em;
+  }
+
+  #an-world-cup-streaming .an-focus-text {
+    display: block;
+    max-width: 1060px;
+    margin: 0;
+    padding: 0;
+    color: #3f4854;
+    font-family: var(--an-sans);
+    font-size: 14.5px;
+    line-height: 1.58;
+    font-weight: 400;
+    text-align: left;
+    text-transform: none;
+  }
+
+  #an-world-cup-streaming .an-focus-text strong {
+    color: #111;
+    font-weight: 900;
+  }
+
+  @container an-embed (max-width: 720px) {
+    #an-world-cup-streaming .an-top5-focus-head {
+      padding: 16px 14px;
+    }
+
+    #an-world-cup-streaming .an-focus-intro {
+      font-size: 13px;
+    }
+
+    #an-world-cup-streaming .an-focus-card {
+      padding: 15px 13px;
+    }
+
+    #an-world-cup-streaming .an-focus-title {
+      font-size: clamp(20px, 6cqw, 30px);
+      line-height: 1.05;
+    }
+
+    #an-world-cup-streaming .an-focus-stats {
+      gap: 6px;
+    }
+
+    #an-world-cup-streaming .an-focus-stats span {
+      min-height: 27px;
+      font-size: 12px;
+    }
+
+    #an-world-cup-streaming .an-focus-stats strong {
+      font-size: 14px;
+    }
+
+    #an-world-cup-streaming .an-focus-text {
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+  }
+
+  /* Methodology */
+  #an-world-cup-streaming .an-methodology {
+    width: 100%;
+    margin: 0;
+    padding: 0 var(--an-page-pad) clamp(26px, 3vw, 40px);
+  }
+
+  #an-world-cup-streaming .an-methodology-inner {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--an-line);
+    box-shadow: 0 10px 22px rgba(0,0,0,.05);
+  }
+
+  #an-world-cup-streaming .an-methodology-head {
+    position: relative;
+    min-height: 170px;
+    padding: 38px 33px 40px;
+    color: #fff;
+    background: linear-gradient(90deg, #050b0c 0%, #071d1c 58%, #003f36 100%);
+    border: 0;
+    box-shadow: none;
+  }
+
+  #an-world-cup-streaming .an-methodology-head .an-kicker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    margin: 0 0 17px;
+    padding: 0 14px;
+    background: var(--an-green);
+    color: #050b0c;
+    border: 0;
+    box-shadow: none;
+    font-family: var(--an-display);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  #an-world-cup-streaming .an-methodology h3 {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: transparent;
+    border: 0;
+    font-family: var(--an-display);
+    font-size: clamp(30px, 3.1vw, 42px);
+    line-height: 1.02;
+    font-weight: 700;
+    letter-spacing: .012em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-shadow: 1.6px 1.6px 0 rgba(0,230,168,.28), 3px 3px 0 rgba(0,0,0,.22);
+  }
+
+  #an-world-cup-streaming .an-methodology-body {
+    padding: clamp(18px, 2vw, 24px);
+    border-left: 6px solid var(--an-green);
+  }
+
+  #an-world-cup-streaming .an-methodology p {
+    margin: 0 0 10px;
+    color: #3b4652;
+    font-size: 14.5px;
+    line-height: 1.68;
+  }
+
+  #an-world-cup-streaming .an-methodology p:last-child {
+    margin-bottom: 0;
+  }
+
+  #an-world-cup-streaming .an-methodology-disclaimer {
+    margin-top: 16px;
+    padding: 13px 15px;
+    color: #17252d;
+    background: #f4fffb;
+    border: 1px solid #b8ded4;
+    border-left: 5px solid var(--an-green);
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  #an-world-cup-streaming .an-methodology-disclaimer strong {
+    color: #111;
+    font-weight: 800;
+  }
+
+  @media (max-width: 1180px) {
+    #an-world-cup-streaming .an-methodology-head {
+      min-height: 0;
+      padding: 34px 30px 36px;
+    }
+
+    #an-world-cup-streaming .an-methodology h3 {
+      max-width: none;
+      font-size: clamp(25px, 3.35vw, 38px);
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 760px) {
+    #an-world-cup-streaming .an-methodology h3 {
+      white-space: normal;
+      max-width: 100%;
+      font-size: clamp(30px, 8.8vw, 38px);
+      line-height: 1.05;
+    }
+  }
+
+  @media (max-width: 620px) {
+    #an-world-cup-streaming .an-methodology-head {
+      padding: 28px 18px 30px;
+    }
+
+    #an-world-cup-streaming .an-methodology-head .an-kicker {
+      height: 34px;
+      margin-bottom: 15px;
+      padding: 0 12px;
+      font-size: 11px;
+    }
+
+    #an-world-cup-streaming .an-methodology h3 {
+      font-size: clamp(30px, 8.8vw, 38px);
+      line-height: 1.05;
+      white-space: normal;
+      text-shadow: 1.2px 1.2px 0 rgba(0,230,168,.24), 2.4px 2.4px 0 rgba(0,0,0,.2);
+    }
+  }
+
+
+
+  /* Tooltip */
+  .an-table-tip {
+    position: fixed;
+    z-index: 2147483647;
+    width: min(320px, calc(100vw - 28px));
+    overflow: hidden;
+    background: #fff;
+    color: #17202a;
+    border: 1px solid rgba(0,230,168,.58);
+    border-top: 5px solid var(--an-green);
+    box-shadow: 0 18px 42px rgba(0,0,0,.24);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    pointer-events: none;
+    transition: opacity 150ms ease, transform 150ms ease, visibility 150ms ease;
+  }
+
+  .an-table-tip.is-showing {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .an-table-tip-head {
+    display: block;
+    padding: 11px 13px 9px;
+    color: #fff;
+    background: linear-gradient(90deg, #050b0c 0%, #071515 58%, #003f36 100%);
+    font-family: var(--an-display);
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: .055em;
+    text-transform: uppercase;
+  }
+
+  .an-table-tip-body {
+    display: block;
+    padding: 11px 13px 12px;
+    color: #2b3440;
+    background: #fbfffd;
+    font-family: var(--an-sans);
+    font-size: 13px;
+    line-height: 1.45;
+    font-weight: 700;
+  }
+
+  /* Export */
+  #an-world-cup-streaming .an-exporting {
+    width: 1200px !important;
+    max-width: 1200px !important;
+    box-shadow: none !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-rankings-tools {
+    display: none !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-panel {
+    display: none !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-panel.is-active {
+    display: block !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-table-scroll,
+  #an-world-cup-streaming .an-exporting .an-chart-scroll {
+    overflow: visible !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-table {
+    min-width: 0 !important;
+  }
+
+  @media (max-width: 900px) {
+    #an-world-cup-streaming .an-calc-grid {
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    }
+
+    #an-world-cup-streaming .an-calc-controls,
+    #an-world-cup-streaming .an-calc-result {
+      min-height: 0;
+    }
+
+    #an-world-cup-streaming .an-calc-result {
+      grid-template-rows: none;
+    }
+
+    #an-world-cup-streaming .an-state-visual {
+      max-width: 640px;
+      margin-inline: auto;
+      flex: 0 0 auto;
+    }
+
+    #an-world-cup-streaming .an-state-visual img {
+      aspect-ratio: 4 / 3;
+      height: auto;
+    }
+
+    #an-world-cup-streaming .an-rankings-tools {
+      align-items: stretch;
+    }
+  }
+
+  @media (max-width: 620px) {
+    #an-world-cup-streaming {
+      --an-page-pad: 14px;
+    }
+
+    #an-world-cup-streaming .an-calculator {
+      padding: 12px;
+    }
+#an-world-cup-streaming .an-state-source {
+      display: block;
+      margin: 6px 0 0;
+      text-align: left;
+    }
+
+    #an-world-cup-streaming .an-tabs,
+    #an-world-cup-streaming .an-btn.primary {
+      width: 100%;
+    }
+
+    #an-world-cup-streaming .an-tab-btn {
+      flex: 1 1 0;
+    }
+
+    #an-world-cup-streaming .an-chart {
+      min-width: 660px;
+    }
+
+    #an-world-cup-streaming .an-table {
+      min-width: 820px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #an-world-cup-streaming .an-fill {
+      transition: none;
+    }
+  }
+
+  /* Contained final layout */
+  #an-world-cup-streaming .an-main,
+  #an-world-cup-streaming .an-intro,
+  #an-world-cup-streaming .an-section,
+  #an-world-cup-streaming .an-methodology,
+  #an-world-cup-streaming .an-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  #an-world-cup-streaming .an-calculator,
+  #an-world-cup-streaming .an-rankings,
+  #an-world-cup-streaming .an-methodology-inner,
+  #an-world-cup-streaming .an-section-head,
+  #an-world-cup-streaming .an-rankings-head,
+  #an-world-cup-streaming .an-methodology-head,
+  #an-world-cup-streaming .an-calc-controls,
+  #an-world-cup-streaming .an-calc-result {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+
+  /* Font polish from reference campaign */
+  #an-world-cup-streaming {
+    font-family: var(--an-sans);
+  }
+
+  #an-world-cup-streaming .an-intro p,
+  #an-world-cup-streaming .an-section-sub,
+  #an-world-cup-streaming .an-caption,
+  #an-world-cup-streaming .an-methodology p,
+  #an-world-cup-streaming .an-footer,
+  #an-world-cup-streaming .an-result-card small,
+  #an-world-cup-streaming .an-calc-sentence,
+  #an-world-cup-streaming .an-state-label span,
+  #an-world-cup-streaming #stateImageCaption,
+  .an-table-tip-body {
+    font-family: var(--an-sans);
+    font-weight: 500;
+  }
+
+  #an-world-cup-streaming .an-select,
+  #an-world-cup-streaming .an-search,
+  #an-world-cup-streaming .an-table td {
+    font-family: var(--an-sans);
+    font-weight: 500;
+  }
+
+  #an-world-cup-streaming .an-state-cell strong {
+    font-family: var(--an-sans);
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  #an-world-cup-streaming .an-rank-cell,
+  #an-world-cup-streaming .an-hour-cell,
+  #an-world-cup-streaming .an-tax-pill {
+    font-family: var(--an-display);
+  }
+
+  #an-world-cup-streaming .an-table th,
+  #an-world-cup-streaming .an-section-title,
+  #an-world-cup-streaming .an-rankings-head h2,
+  #an-world-cup-streaming .an-kicker,
+  #an-world-cup-streaming .an-btn,
+  #an-world-cup-streaming .an-tab-btn,
+  #an-world-cup-streaming .an-field label,
+  #an-world-cup-streaming .an-result-card span,
+  #an-world-cup-streaming .an-result-card strong,
+  #an-world-cup-streaming .an-state-visual strong,
+  #an-world-cup-streaming .an-state-label strong,
+  #an-world-cup-streaming .an-hours,
+  #an-world-cup-streaming .an-rank-pill,
+  #an-world-cup-streaming .an-methodology h3,
+  .an-table-tip-head {
+    font-family: var(--an-display);
+  }
+
+
+  /* Full-width intro copy */
+  #an-world-cup-streaming .an-intro,
+  #an-world-cup-streaming .an-clean-intro,
+  #an-world-cup-streaming .an-copy {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  #an-world-cup-streaming .an-intro p,
+  #an-world-cup-streaming .an-clean-intro p,
+  #an-world-cup-streaming .an-copy p {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+
+  /* Table controls after search removal */
+  #an-world-cup-streaming .an-table-controls {
+    justify-content: flex-start !important;
+    padding-top: 4px !important;
+  }
+
+  #an-world-cup-streaming .an-table-count {
+    margin: 0 !important;
+  }
+
+
+  /* Hide table count label after moving Top 10 into kicker */
+  #an-world-cup-streaming .an-table-count {
+    display: none !important;
+  }
+
+
+  /* Clean table controls after removing search/count label */
+  #an-world-cup-streaming .an-table-controls {
+    display: none !important;
+  }
+
+
+  /* Chart expand/collapse control */
+  #an-world-cup-streaming .an-chart-bottom {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0 4px;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-chart-bottom {
+    display: none !important;
+  }
+
+  /* Hide table expand control in downloaded images */
+  #an-world-cup-streaming .an-exporting .an-table-bottom {
+    display: none !important;
+  }
+
+
+  
+
+
+  /* Tooltip placement: prefer above, flip below only near viewport top */
+  .an-table-tip[data-placement="top"].is-showing {
+    transform: translateY(0);
+  }
+
+  .an-table-tip[data-placement="bottom"] {
+    transform: translateY(6px);
+  }
+
+  .an-table-tip[data-placement="bottom"].is-showing {
+    transform: translateY(0);
+  }
+
+
+  /* Remove hover-only tooltip markers from downloaded images */
+  #an-world-cup-streaming .an-exporting .an-table th[data-tip]::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-table th[data-tip] {
+    text-decoration: none !important;
+    cursor: default !important;
+  }
+
+
+  /* Download dropdown */
+  #an-world-cup-streaming .an-download-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  #an-world-cup-streaming .an-download-toggle {
+    min-width: 188px;
+    justify-content: center;
+  }
+
+  #an-world-cup-streaming .an-download-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 40;
+    min-width: 232px;
+    padding: 8px;
+    background: #fbfffd;
+    border: 1px solid var(--an-line);
+    box-shadow: 0 14px 30px rgba(0,0,0,.14);
+  }
+
+  #an-world-cup-streaming .an-download-option {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border: 0;
+    background: transparent;
+    color: #111;
+    text-align: left;
+    cursor: pointer;
+    font-family: var(--an-display);
+    font-size: 13px;
+    line-height: 1.1;
+    font-weight: 900;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+  }
+
+  #an-world-cup-streaming .an-download-option:hover,
+  #an-world-cup-streaming .an-download-option:focus-visible {
+    outline: 0;
+    background: #d7fff3;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-download-wrap {
+    display: none !important;
+  }
+
+  @media (max-width: 620px) {
+    #an-world-cup-streaming .an-download-wrap,
+    #an-world-cup-streaming .an-download-toggle {
+      width: 100%;
+    }
+
+    #an-world-cup-streaming .an-download-menu {
+      left: 0;
+      right: auto;
+      min-width: 100%;
+    }
+  }
+
+
+  /* Keep download exports clean */
+  #an-world-cup-streaming .an-exporting .an-chart-bottom,
+  #an-world-cup-streaming .an-exporting .an-table-bottom,
+  #an-world-cup-streaming .an-exporting .an-download-wrap {
+    display: none !important;
+  }
+
+
+  
+  /* Matched campaign header style */
+  #an-world-cup-streaming .an-section-head,
+  #an-world-cup-streaming .an-rankings-head {
+    position: relative;
+    min-height: 170px;
+    padding: 38px 33px 40px;
+    color: #fff;
+    background: linear-gradient(90deg, #050b0c 0%, #071d1c 58%, #003f36 100%);
+    border: 0;
+    box-shadow: none;
+    overflow: hidden;
+    container-type: inline-size;
+  }
+
+  #an-world-cup-streaming .an-section-head .an-kicker,
+  #an-world-cup-streaming .an-rankings-head .an-kicker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    margin: 0 0 17px;
+    padding: 0 14px;
+    background: var(--an-green);
+    color: #050b0c;
+    border: 0;
+    box-shadow: none;
+    font-family: var(--an-display);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  #an-world-cup-streaming .an-section-head .an-section-title,
+  #an-world-cup-streaming .an-rankings-head h2 {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: transparent;
+    border: 0;
+    font-family: var(--an-display);
+    font-size: clamp(28px, 2.25vw, 38px);
+    line-height: 1.02;
+    font-weight: 700;
+    letter-spacing: .006em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    text-shadow: 1.6px 1.6px 0 rgba(0,230,168,.28), 3px 3px 0 rgba(0,0,0,.22);
+  }
+
+  @supports (font-size: 1cqw) {
+    #an-world-cup-streaming .an-section-head .an-section-title,
+    #an-world-cup-streaming .an-rankings-head h2 {
+      font-size: clamp(28px, 3.15cqw, 42px);
+    }
+  }
+
+  #an-world-cup-streaming .an-section-head + .an-section-sub {
+    border-top: 0;
+  }
+
+  @container an-embed (max-width: 760px) {
+    #an-world-cup-streaming .an-section-head,
+    #an-world-cup-streaming .an-rankings-head {
+      min-height: 0;
+      padding: 30px 20px 32px;
+    }
+
+    #an-world-cup-streaming .an-section-head .an-section-title,
+    #an-world-cup-streaming .an-rankings-head h2 {
+      white-space: normal;
+      overflow: visible;
+      text-overflow: initial;
+      font-size: clamp(30px, 8.8cqw, 38px);
+      line-height: 1.05;
+    }
+  }
+
+  @media (max-width: 620px) {
+    #an-world-cup-streaming .an-section-head,
+    #an-world-cup-streaming .an-rankings-head {
+      padding: 28px 18px 30px;
+    }
+
+    #an-world-cup-streaming .an-section-head .an-kicker,
+    #an-world-cup-streaming .an-rankings-head .an-kicker {
+      height: 34px;
+      margin-bottom: 15px;
+      padding: 0 12px;
+      font-size: 11px;
+    }
+
+    #an-world-cup-streaming .an-section-head .an-section-title,
+    #an-world-cup-streaming .an-rankings-head h2 {
+      font-size: clamp(30px, 8.8vw, 38px);
+      line-height: 1.05;
+      white-space: normal;
+      overflow: visible;
+      text-shadow: 1.2px 1.2px 0 rgba(0,230,168,.24), 2.4px 2.4px 0 rgba(0,0,0,.2);
+    }
+  }
+
+  #an-world-cup-streaming .an-intro a {
+    color: #111;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: var(--an-green);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+
+  #an-world-cup-streaming .an-intro a:hover,
+  #an-world-cup-streaming .an-intro a:focus-visible {
+    color: #008c73;
+  }
+
+
+  #an-world-cup-streaming .an-intro p + p {
+    margin-top: 12px;
+  }
+
+
+  /* CMS containment and overflow protection */
+  #an-world-cup-streaming img,
+  #an-world-cup-streaming svg,
+  #an-world-cup-streaming canvas,
+  #an-world-cup-streaming iframe {
+    max-width: 100%;
+  }
+
+  #an-world-cup-streaming .an-calc-grid,
+  #an-world-cup-streaming .an-chart-scroll,
+  #an-world-cup-streaming .an-table-scroll,
+  #an-world-cup-streaming .an-state-visual,
+  #an-world-cup-streaming .an-result-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  #an-world-cup-streaming .an-table-scroll,
+  #an-world-cup-streaming .an-chart-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  #an-world-cup-streaming .an-state-img {
+    width: 100%;
+    max-width: 100%;
+  }
+#an-world-cup-streaming .an-calc-controls {
+      padding: 18px;
+    }
+
+    #an-world-cup-streaming .an-result-card {
+      padding: 20px 16px;
+    }
+
+    #an-world-cup-streaming .an-select-wrap select {
+      min-height: 58px;
+      font-size: 18px;
+      padding: 0 42px 0 16px;
+    }
+  }
+}
+
+
+  /* Consistent two-column calculator layout */
+  #an-world-cup-streaming .an-calc-result {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(0, 1fr)) auto;
+    gap: clamp(8px, 1.05cqw, 12px);
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    align-content: stretch;
+  }
+
+  #an-world-cup-streaming .an-result-card {
+    min-height: 0;
+    padding: clamp(12px, 1.35cqw, 20px);
+  }
+
+  #an-world-cup-streaming .an-calc-sentence {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  @container an-embed (max-width: 960px) {
+    #an-world-cup-streaming .an-calc-grid {
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 14px;
+      padding: 16px;
+      align-items: stretch;
+    }
+
+    #an-world-cup-streaming .an-calc-controls {
+      height: 100%;
+      padding: 14px;
+    }
+
+    #an-world-cup-streaming .an-calc-result {
+      gap: 10px;
+      height: 100%;
+    }
+
+    #an-world-cup-streaming .an-result-card {
+      padding: 16px 17px;
+    }
+
+    #an-world-cup-streaming .an-result-card span {
+      margin-bottom: 7px;
+    }
+
+    #an-world-cup-streaming .an-result-card small {
+      margin-top: 7px;
+      font-size: 12px;
+      line-height: 1.32;
+    }
+
+    #an-world-cup-streaming .an-result-value {
+      font-size: clamp(36px, 5.6cqw, 58px);
+      line-height: .9;
+    }
+
+    #an-world-cup-streaming .an-compare-word {
+      font-size: clamp(24px, 3.6cqw, 36px);
+      line-height: .9;
+    }
+
+    #an-world-cup-streaming .an-result-card.is-comparison strong em {
+      margin-top: 5px;
+      font-size: .52em;
+      line-height: 1;
+    }
+
+    #an-world-cup-streaming .an-calc-sentence {
+      padding: 13px 15px;
+      font-size: clamp(12.5px, 1.65cqw, 15px);
+      line-height: 1.42;
+    }
+
+    #an-world-cup-streaming .an-state-img {
+      aspect-ratio: 16 / 13;
+      max-height: 430px;
+    }
+  }
+
+  @container an-embed (max-width: 720px) {
+    #an-world-cup-streaming .an-calc-grid {
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 10px;
+      padding: 10px;
+      align-items: stretch;
+    }
+
+    #an-world-cup-streaming .an-calc-controls {
+      gap: 9px;
+      padding: 10px;
+    }
+
+    #an-world-cup-streaming .an-calc-result {
+      grid-template-rows: repeat(3, minmax(0, 1fr)) auto;
+      gap: 8px;
+      height: 100%;
+    }
+
+    #an-world-cup-streaming .an-result-card {
+      padding: 11px 12px;
+      border-top-width: 4px;
+    }
+
+    #an-world-cup-streaming .an-result-card::after {
+      width: 84px;
+      height: 84px;
+      top: -38px;
+      right: -34px;
+    }
+
+    #an-world-cup-streaming .an-result-card span,
+    #an-world-cup-streaming .an-result-kicker {
+      margin-bottom: 5px;
+      font-size: 10.5px;
+      line-height: 1.05;
+      letter-spacing: .055em;
+    }
+
+    #an-world-cup-streaming .an-result-value {
+      font-size: clamp(30px, 7.3cqw, 46px);
+      line-height: .88;
+    }
+
+    #an-world-cup-streaming .an-result-card small {
+      margin-top: 5px;
+      font-size: 11.5px;
+      line-height: 1.26;
+    }
+
+    #an-world-cup-streaming .an-compare-word {
+      font-size: clamp(20px, 4.6cqw, 30px);
+      line-height: .92;
+    }
+
+    #an-world-cup-streaming .an-result-card.is-comparison strong em {
+      margin-top: 4px;
+      font-size: .48em;
+      line-height: 1;
+      letter-spacing: .045em;
+    }
+
+    #an-world-cup-streaming .an-calc-sentence {
+      padding: 10px 12px;
+      font-size: clamp(11.5px, 1.75cqw, 13.5px);
+      line-height: 1.34;
+    }
+
+    #an-world-cup-streaming .an-select-wrap select,
+    #an-world-cup-streaming .an-select {
+      min-height: 50px;
+      padding: 0 36px 0 13px;
+      font-size: clamp(15px, 2.3cqw, 18px);
+    }
+
+    #an-world-cup-streaming .an-field label {
+      margin-bottom: 7px;
+      font-size: 11px;
+    }
+
+    #an-world-cup-streaming .an-state-img {
+      aspect-ratio: 4 / 5;
+      max-height: 520px;
+    }
+
+    #an-world-cup-streaming .an-state-visual figcaption {
+      min-height: 58px;
+      padding: 10px 12px;
+      gap: 8px;
+    }
+  }
+
+  @container an-embed (max-width: 520px) {
+    #an-world-cup-streaming .an-calc-grid {
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 8px;
+      padding: 8px;
+    }
+
+    #an-world-cup-streaming .an-calc-controls {
+      padding: 8px;
+    }
+
+    #an-world-cup-streaming .an-result-card {
+      padding: 9px 10px;
+    }
+
+    #an-world-cup-streaming .an-result-card span,
+    #an-world-cup-streaming .an-field label {
+      font-size: 9.5px;
+      letter-spacing: .045em;
+    }
+
+    #an-world-cup-streaming .an-result-value {
+      font-size: clamp(25px, 9cqw, 38px);
+    }
+
+    #an-world-cup-streaming .an-result-card small,
+    #an-world-cup-streaming .an-calc-sentence {
+      font-size: 10.5px;
+    }
+
+    #an-world-cup-streaming .an-calc-sentence {
+      padding: 9px 10px;
+    }
+
+    #an-world-cup-streaming .an-state-visual strong,
+    #an-world-cup-streaming .an-state-caption strong,
+    #an-world-cup-streaming .an-state-caption span,
+    #an-world-cup-streaming .an-state-caption small {
+      font-size: 10px;
+      line-height: 1.2;
+    }
+  }
+
+
+  /* Calculator image-column empty-space fix */
+  #an-world-cup-streaming .an-calc-controls {
+    justify-content: stretch;
+  }
+
+  #an-world-cup-streaming .an-calc-controls .an-state-visual {
+    flex: 1 1 auto;
+    align-self: stretch;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+  }
+
+  #an-world-cup-streaming .an-calc-controls .an-state-visual img {
+    flex: 1 1 auto;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: cover;
+  }
+
+  #an-world-cup-streaming .an-calc-controls .an-state-visual figcaption {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @container an-embed (max-width: 960px) {
+    #an-world-cup-streaming .an-calc-controls .an-state-visual img {
+      aspect-ratio: auto;
+    }
+  }
+
+  @container an-embed (max-width: 720px) {
+    #an-world-cup-streaming .an-calc-controls .an-state-visual img {
+      aspect-ratio: auto;
+    }
+  }
+
+
+  /* Compact no-scroll chart view */
+  #an-world-cup-streaming .an-state-label,
+  #an-world-cup-streaming .an-track,
+  #an-world-cup-streaming .an-hours {
+    min-width: 0;
+  }
+
+  #an-world-cup-streaming .an-state-label strong,
+  #an-world-cup-streaming .an-state-label span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @container an-embed (max-width: 720px) {
+    #an-world-cup-streaming .an-panel {
+      padding: 12px;
+    }
+
+    #an-world-cup-streaming .an-chart {
+      gap: 8px;
+      padding: 10px;
+    }
+
+    #an-world-cup-streaming .an-bar-row {
+      grid-template-columns: 42px minmax(98px, .95fr) minmax(64px, 1fr) 42px;
+      column-gap: 10px;
+      row-gap: 3px;
+      min-height: 48px;
+      padding: 5px 6px;
+    }
+
+    #an-world-cup-streaming .an-rank-pill {
+      width: 34px;
+      height: 32px;
+      font-size: 18px;
+    }
+
+    #an-world-cup-streaming .an-state-label strong {
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: .01em;
+    }
+
+    #an-world-cup-streaming .an-state-label span {
+      margin-top: 2px;
+      font-size: 10.5px;
+      line-height: 1.15;
+    }
+
+    #an-world-cup-streaming .an-track {
+      height: 26px;
+    }
+
+    #an-world-cup-streaming .an-hours {
+      font-size: 21px;
+    }
+  }
+
+  @container an-embed (max-width: 520px) {
+    #an-world-cup-streaming .an-panel {
+      padding: 10px;
+    }
+
+    #an-world-cup-streaming .an-chart {
+      gap: 7px;
+      padding: 8px;
+    }
+
+    #an-world-cup-streaming .an-bar-row {
+      grid-template-columns: 38px minmax(88px, .95fr) minmax(54px, 1fr) 36px;
+      column-gap: 9px;
+      row-gap: 3px;
+      min-height: 44px;
+      padding: 5px 5px;
+    }
+
+    #an-world-cup-streaming .an-rank-pill {
+      width: 30px;
+      height: 28px;
+      font-size: 16px;
+    }
+
+    #an-world-cup-streaming .an-state-label strong {
+      font-size: 12px;
+    }
+
+    #an-world-cup-streaming .an-state-label span {
+      font-size: 9.5px;
+    }
+
+    #an-world-cup-streaming .an-track {
+      height: 23px;
+    }
+
+    #an-world-cup-streaming .an-hours {
+      font-size: 18px;
+    }
+  }
+
+  /* Chart label breathing room */
+  #an-world-cup-streaming .an-state-label {
+    padding-left: 2px;
+  }
+
+  @container an-embed (max-width: 720px) {
+    #an-world-cup-streaming .an-state-label {
+      padding-left: 4px;
+    }
+  }
+
+
+
+  /* Calculator 60/40 image-first layout */
+  #an-world-cup-streaming .an-calc-grid {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    align-items: stretch;
+    gap: clamp(12px, 1.6vw, 18px);
+  }
+
+  #an-world-cup-streaming .an-calc-controls,
+  #an-world-cup-streaming .an-calc-result {
+    height: 100%;
+    min-height: 0;
+  }
+
+  #an-world-cup-streaming .an-calc-result {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(0, 1fr)) auto;
+    gap: clamp(9px, 1.05cqw, 12px);
+    align-content: stretch;
+  }
+
+  #an-world-cup-streaming .an-result-card {
+    min-height: 0;
+    padding: clamp(12px, 1.15cqw, 16px);
+  }
+
+  #an-world-cup-streaming .an-result-card span {
+    margin-bottom: 6px;
+    font-size: clamp(10.5px, .95cqw, 12px);
+    line-height: 1.05;
+  }
+
+  #an-world-cup-streaming .an-result-card strong {
+    font-size: clamp(32px, 3vw, 44px);
+    line-height: .9;
+  }
+
+  #an-world-cup-streaming .an-result-card.is-comparison strong {
+    font-size: clamp(26px, 2.5vw, 34px);
+  }
+
+  #an-world-cup-streaming .an-result-card.is-comparison strong em {
+    margin-top: 5px;
+    font-size: .52em;
+    line-height: 1;
+  }
+
+  #an-world-cup-streaming .an-result-card small {
+    margin-top: 6px;
+    font-size: clamp(11px, 1.05cqw, 12.5px);
+    line-height: 1.28;
+  }
+
+  #an-world-cup-streaming .an-calc-sentence {
+    padding: 12px 14px;
+    font-size: clamp(11.5px, 1.1cqw, 13.5px);
+    line-height: 1.35;
+  }
+
+  @container an-embed (max-width: 960px) {
+    #an-world-cup-streaming .an-calc-grid {
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 12px;
+      padding: 14px;
+    }
+
+    #an-world-cup-streaming .an-calc-controls {
+      padding: 12px;
+    }
+
+    #an-world-cup-streaming .an-calc-result {
+      gap: 9px;
+    }
+
+    #an-world-cup-streaming .an-result-card {
+      padding: 11px 12px;
+    }
+
+    #an-world-cup-streaming .an-result-value {
+      font-size: clamp(28px, 4.8cqw, 42px);
+    }
+
+    #an-world-cup-streaming .an-compare-word {
+      font-size: clamp(18px, 3.2cqw, 28px);
+    }
+
+    #an-world-cup-streaming .an-state-img {
+      aspect-ratio: auto;
+      max-height: none;
+    }
+  }
+
+  @container an-embed (max-width: 720px) {
+    #an-world-cup-streaming .an-calc-grid {
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+
+    #an-world-cup-streaming .an-calc-controls {
+      gap: 8px;
+      padding: 9px;
+    }
+
+    #an-world-cup-streaming .an-calc-result {
+      gap: 7px;
+    }
+
+    #an-world-cup-streaming .an-result-card {
+      padding: 9px 10px;
+      border-top-width: 4px;
+    }
+
+    #an-world-cup-streaming .an-result-card span {
+      font-size: 9.5px;
+      letter-spacing: .045em;
+    }
+
+    #an-world-cup-streaming .an-result-value {
+      font-size: clamp(24px, 6cqw, 36px);
+    }
+
+    #an-world-cup-streaming .an-result-card small {
+      font-size: 10.5px;
+      line-height: 1.22;
+    }
+
+    #an-world-cup-streaming .an-calc-sentence {
+      padding: 9px 10px;
+      font-size: 10.5px;
+      line-height: 1.28;
+    }
+
+    #an-world-cup-streaming .an-result-card::after {
+      width: 72px;
+      height: 72px;
+      top: -34px;
+      right: -30px;
+    }
+  }
+
+  @container an-embed (max-width: 520px) {
+    #an-world-cup-streaming .an-calc-grid {
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 8px;
+      padding: 8px;
+    }
+
+    #an-world-cup-streaming .an-calc-controls {
+      padding: 8px;
+    }
+
+    #an-world-cup-streaming .an-result-card {
+      padding: 8px 9px;
+    }
+
+    #an-world-cup-streaming .an-result-value {
+      font-size: clamp(21px, 7cqw, 32px);
+    }
+
+    #an-world-cup-streaming .an-result-card small,
+    #an-world-cup-streaming .an-calc-sentence {
+      font-size: 10px;
+    }
+  }
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+<div id="an-world-cup-streaming">
+  <main class="an-main">
+    <div class="an-intro">
+      <p>With the World Cup now in full swing, streaming access is part of the real cost of following the tournament. Action Network ranked every U.S. state by how many minimum-wage hours it takes to cover a $40 full-tournament streaming baseline, including estimated streaming tax where applicable. The result shows where World Cup streaming is most and least affordable for minimum-wage workers.</p>
+      <p>Readers following the tournament can also track the latest <a href="https://www.actionnetwork.com/soccer-world-cup/archive/1">World Cup odds</a> as the competition unfolds.</p>
+    </div>
+
+    <section class="an-key-findings" id="key-findings">
+      <div class="an-key-findings-inner">
+        <div class="an-key-findings-head">
+          <div class="an-kicker">Key Findings</div>
+          <h2>What the Data Shows</h2>
+        </div>
+        <div class="an-key-list">
+          <article class="an-key-row">
+            <div class="an-key-rank">1</div>
+            <div class="an-key-copy">
+              <div class="an-key-title">Louisiana is the least affordable state for World Cup streaming</div>
+              <div class="an-key-text">Louisiana ranks No. 1 overall, with minimum-wage workers needing about <strong>6.08 hrs</strong> to cover the full tournament stream.</div>
+            </div>
+          </article>
+
+          <article class="an-key-row">
+            <div class="an-key-rank">2</div>
+            <div class="an-key-copy">
+              <div class="an-key-title">Tennessee follows closely behind</div>
+              <div class="an-key-text">Tennessee ranks No. 2 overall, with workers needing about <strong>6.05 hrs</strong> at the minimum wage.</div>
+            </div>
+          </article>
+
+          <article class="an-key-row">
+            <div class="an-key-rank">3</div>
+            <div class="an-key-copy">
+              <div class="an-key-title">California is the most affordable state in the ranking</div>
+              <div class="an-key-text">California ranks No. 50 overall, with the shortest estimated work time in the study at <strong>2.37 hrs</strong>.</div>
+            </div>
+          </article>
+
+          <article class="an-key-row">
+            <div class="an-key-rank">4</div>
+            <div class="an-key-copy">
+              <div class="an-key-title">New York is also among the most affordable states</div>
+              <div class="an-key-text">New York ranks No. 49 overall, with minimum-wage workers needing about <strong>2.50 hrs</strong> to afford the stream.</div>
+            </div>
+          </article>
+
+          <article class="an-key-row">
+            <div class="an-key-rank">5</div>
+            <div class="an-key-copy">
+              <div class="an-key-title">The national average is 4.14 hours</div>
+              <div class="an-key-text">Across all 50 states, the average estimated work time is about <strong>4.14 hrs</strong>.</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="an-expert-quote" id="expert-quote">
+      <div class="an-expert-quote-inner">
+        <div class="an-quote-top">
+          <span class="an-quote-kicker">Expert Quote</span>
+        </div>
+        <blockquote>
+          “For many Americans, following the World Cup is not just about finding the time to watch, but also about the cost of access. A $40 stream may sound straightforward, but this analysis shows that affordability looks very different depending on where fans live and what they earn. By comparing streaming costs with minimum wages in every state, the study highlights where watching the tournament takes the biggest bite out of a worker’s pay.”
+        </blockquote>
+        <div class="an-quote-source">
+          <span></span>
+          Action Network spokesperson
+        </div>
+      </div>
+    </section>
+
+<section class="an-section" id="calculator">
+      <div class="an-section-head">
+        <div class="an-kicker">Calculator</div>
+        <h2 class="an-section-title">World Cup Streaming Affordability by State</h2>
+      </div>
+      <p class="an-section-sub">Select a state to see the minimum-wage hours needed to afford the stream, its national rank and how it compares with the U.S. average.</p>
+      <div class="an-calculator">
+        <div class="an-calc-grid">
+          <div class="an-calc-controls">
+            <div class="an-field">
+              <label for="stateSelect">State</label>
+              <select class="an-select" id="stateSelect"></select>
+            </div>
+            <figure class="an-state-visual" id="stateVisual">
+              <img id="stateImage" src="" alt="" loading="lazy">
+              <figcaption>
+                <div>
+                  <strong id="stateImageTitle">Louisiana</strong>
+                  <span id="stateImageCaption">Loading cityscape...</span>
+                </div>
+                <span class="an-state-source">Source: Wikimedia</span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="an-calc-result" id="calcResult"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="an-section" id="ranking">
+      <div class="an-rankings" id="rankingAsset">
+        <div class="an-rankings-head">
+          <div class="an-kicker">Top 10</div>
+          <h2>Where World Cup streaming is least affordable</h2>
+        </div>
+
+        <div class="an-rankings-tools">
+          <div class="an-tabs" role="tablist" aria-label="Ranking views">
+            <button class="an-tab-btn is-active" type="button" data-tab="chart" role="tab" aria-selected="true">Chart view</button>
+            <button class="an-tab-btn" type="button" data-tab="table" role="tab" aria-selected="false">Table view</button>
+          </div>
+          <div class="an-download-wrap">
+            <button class="an-btn primary an-download-toggle" type="button" id="downloadRanking" aria-haspopup="true" aria-expanded="false">Download image</button>
+            <div class="an-download-menu" id="downloadMenu" hidden>
+              <button class="an-download-option" type="button" data-download-scope="top10">Download top 10 chart</button>
+              <button class="an-download-option" type="button" data-download-scope="full" id="downloadFullOption">Download full chart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="an-panel is-active" data-panel="chart" role="tabpanel">
+          <div class="an-chart-scroll">
+            <div class="an-chart" id="chartRows"></div>
+          </div>
+          <div class="an-chart-bottom">
+            <button class="an-btn" type="button" id="toggleChartRows">Show all 50 states</button>
+          </div>
+          <p class="an-caption">Caption: Streaming affordability is calculated by dividing each state’s estimated streaming cost by its minimum hourly wage.</p>
+        </div>
+
+        <div class="an-panel" data-panel="table" role="tabpanel">
+          <div class="an-table-controls">
+
+          </div>
+          <div class="an-table-scroll">
+            <table class="an-table">
+              <thead>
+                <tr>
+                  <th data-sort="rank" data-tip-title="Rank" data-tip="State position in the ranking, ordered from the longest minimum-wage work time to the shortest.">Rank</th>
+                  <th data-sort="state" data-tip-title="State" data-tip="The U.S. state included in the streaming affordability ranking.">State</th>
+                  <th data-sort="hours" data-tip-title="Hours" data-tip="Estimated minimum-wage hours needed to cover the full World Cup stream in that state.">Hours</th>
+                  <th data-sort="totalCost" data-tip-title="Estimated total cost" data-tip="The $40 baseline streaming price plus estimated state tax where applicable.">Est. total cost</th>
+                  <th data-sort="minimumWage" data-tip-title="Minimum wage" data-tip="Hourly wage used to calculate work time. The federal $7.25 rate is used where no higher state rate applies.">Min. wage</th>
+                  <th data-sort="streamingTaxed" data-tip-title="Streaming taxed?" data-tip="Shows whether estimated state tax was added to the $40 streaming baseline.">Streaming taxed?</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+          <div class="an-table-bottom">
+            <button class="an-btn" type="button" id="toggleRows">Show all 50 states</button>
+          </div>
+          <p class="an-caption">Caption: The ranking runs from least affordable to most affordable based on estimated minimum-wage work time.</p>
+        </div>
+      </div>
+      <div class="an-top5-focus" id="top5-focus">
+        <div class="an-top5-focus-head">
+          <span class="an-focus-kicker">Top 5 in Focus</span>
+          <div class="an-focus-intro">A closer look at why the five least affordable states sit at the top of the ranking.</div>
+        </div>
+        <div class="an-focus-card-list">
+            <article class="an-focus-card">
+              <div class="an-focus-title"><span>No. 1</span> Louisiana</div>
+              <div class="an-focus-stats" aria-label="Louisiana supporting data points">
+                <span><strong>6.08</strong> hrs</span>
+                <span><strong>$44.04</strong> est. cost</span>
+                <span><strong>$7.25</strong>/hr min. wage</span>
+                <span>Streaming taxed</span>
+              </div>
+              <div class="an-focus-text"><strong>What it means:</strong> Louisiana ranks as the least affordable state for World Cup streaming, with minimum-wage workers needing the longest time to cover the full tournament stream. Its position is driven by a $7.25 minimum wage and the highest estimated streaming cost among the top five.</div>
+            </article>
+            <article class="an-focus-card">
+              <div class="an-focus-title"><span>No. 2</span> Tennessee</div>
+              <div class="an-focus-stats" aria-label="Tennessee supporting data points">
+                <span><strong>6.05</strong> hrs</span>
+                <span><strong>$43.84</strong> est. cost</span>
+                <span><strong>$7.25</strong>/hr min. wage</span>
+                <span>Streaming taxed</span>
+              </div>
+              <div class="an-focus-text"><strong>What it means:</strong> Tennessee follows closely behind, with workers needing just over six hours at the minimum wage. The state’s $7.25 minimum wage and estimated streaming tax keep the work-time burden near the top of the ranking.</div>
+            </article>
+            <article class="an-focus-card">
+              <div class="an-focus-title"><span>No. 3</span> Alabama</div>
+              <div class="an-focus-stats" aria-label="Alabama supporting data points">
+                <span><strong>6.04</strong> hrs</span>
+                <span><strong>$43.78</strong> est. cost</span>
+                <span><strong>$7.25</strong>/hr min. wage</span>
+                <span>Streaming taxed</span>
+              </div>
+              <div class="an-focus-text"><strong>What it means:</strong> Alabama ranks third, with minimum-wage workers needing about six hours to cover the stream. Its affordability score is shaped by the $7.25 minimum wage and an estimated total streaming cost above $43.</div>
+            </article>
+            <article class="an-focus-card">
+              <div class="an-focus-title"><span>No. 4</span> Texas</div>
+              <div class="an-focus-stats" aria-label="Texas supporting data points">
+                <span><strong>5.97</strong> hrs</span>
+                <span><strong>$43.28</strong> est. cost</span>
+                <span><strong>$7.25</strong>/hr min. wage</span>
+                <span>Streaming taxed</span>
+              </div>
+              <div class="an-focus-text"><strong>What it means:</strong> Texas places fourth despite a slightly lower estimated total cost than the states above it. The state’s $7.25 minimum wage means the stream still takes nearly six hours of work to afford.</div>
+            </article>
+            <article class="an-focus-card">
+              <div class="an-focus-title"><span>No. 5</span> Utah</div>
+              <div class="an-focus-stats" aria-label="Utah supporting data points">
+                <span><strong>5.93</strong> hrs</span>
+                <span><strong>$42.97</strong> est. cost</span>
+                <span><strong>$7.25</strong>/hr min. wage</span>
+                <span>Streaming taxed</span>
+              </div>
+              <div class="an-focus-text"><strong>What it means:</strong> Utah rounds out the top five, with an estimated total cost just under $43. The state’s $7.25 minimum wage keeps the tournament stream among the least affordable nationally.</div>
+            </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="an-methodology" id="methodology">
+      <div class="an-methodology-inner">
+        <div class="an-methodology-head">
+          <div class="an-kicker">Methodology</div>
+          <h3>How We Ranked Streaming Affordability</h3>
+        </div>
+        <div class="an-methodology-body">
+          <p>Action Network used a $40 streaming price as the baseline because it reflects FOX One’s limited-time World Cup offer for three months of access to all 104 matches in English, giving the analysis a consistent tournament-wide comparison point.</p>
+          <p>Streaming tax treatment was applied where applicable, based on state tax guidance. Minimum wage figures were sourced from the U.S. Department of Labor and state government minimum-wage pages, using the applicable statewide minimum hourly wage where available. Where a state has no higher minimum wage, the federal $7.25 rate was used.</p>
+          <p>Each state’s estimated total cost was divided by its minimum hourly wage to calculate the number of work hours needed to afford the full tournament stream.</p>
+          <div class="an-methodology-disclaimer"><strong>Disclaimer:</strong> Figures are estimates and may vary by provider, local taxes and future price changes.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="an-table-tip" id="anTableTip" role="tooltip" aria-hidden="true">
+  <span class="an-table-tip-head"></span>
+  <span class="an-table-tip-body"></span>
+</div>
+
+<script>
+const AN_DATA = [{"rank":1,"state":"Louisiana","hours":6.08,"totalCost":44.044,"minimumWage":7.25,"streamingTaxed":"Yes"},{"rank":2,"state":"Tennessee","hours":6.05,"totalCost":43.844,"minimumWage":7.25,"streamingTaxed":"Yes"},{"rank":3,"state":"Alabama","hours":6.04,"totalCost":43.784,"minimumWage":7.25,"streamingTaxed":"Yes"},{"rank":4,"state":"Texas","hours":5.97,"totalCost":43.28,"minimumWage":7.25,"streamingTaxed":"Yes"},{"rank":5,"state":"Utah","hours":5.93,"totalCost":42.968,"minimumWage":7.25,"streamingTaxed":"Yes"},{"rank":6,"state":"South Carolina","hours":5.93,"totalCost":42.996,"minimumWage":7.25,"streamingTaxed":"Yes"},{"rank":7,"state":"Mississippi","hours":5.91,"totalCost":42.824,"minimumWage":7.25,"streamingTaxed":"Yes"},{"rank":8,"state":"North Carolina","hours":5.9,"totalCost":42.8,"minimumWage":7.25,"streamingTaxed":"Yes"},{"rank":9,"state":"Iowa","hours":5.9,"totalCost":42.776,"minimumWage":7.25,"streamingTaxed":"Yes"},{"rank":10,"state":"Pennsylvania","hours":5.87,"totalCost":42.536,"minimumWage":7.25,"streamingTaxed":"Yes"},{"rank":11,"state":"Kentucky","hours":5.85,"totalCost":42.4,"minimumWage":7.25,"streamingTaxed":"Yes"},{"rank":12,"state":"Wisconsin","hours":5.83,"totalCost":42.288,"minimumWage":7.25,"streamingTaxed":"Yes"},{"rank":13,"state":"Wyoming","hours":5.82,"totalCost":42.224,"minimumWage":7.25,"streamingTaxed":"Yes"},{"rank":14,"state":"Indiana","hours":5.52,"totalCost":40.0,"minimumWage":7.25,"streamingTaxed":"No"},{"rank":15,"state":"Georgia","hours":5.52,"totalCost":40.0,"minimumWage":7.25,"streamingTaxed":"No"},{"rank":16,"state":"Kansas","hours":5.52,"totalCost":40.0,"minimumWage":7.25,"streamingTaxed":"No"},{"rank":17,"state":"Oklahoma","hours":5.52,"totalCost":40.0,"minimumWage":7.25,"streamingTaxed":"No"},{"rank":18,"state":"North Dakota","hours":5.52,"totalCost":40.0,"minimumWage":7.25,"streamingTaxed":"No"},{"rank":19,"state":"New Hampshire","hours":5.52,"totalCost":40.0,"minimumWage":7.25,"streamingTaxed":"No"},{"rank":20,"state":"Idaho","hours":5.52,"totalCost":40.0,"minimumWage":7.25,"streamingTaxed":"No"},{"rank":21,"state":"West Virginia","hours":4.87,"totalCost":42.636,"minimumWage":8.75,"streamingTaxed":"Yes"},{"rank":22,"state":"Arkansas","hours":3.98,"totalCost":43.784,"minimumWage":11.0,"streamingTaxed":"Yes"},{"rank":23,"state":"Ohio","hours":3.9,"totalCost":42.916,"minimumWage":11.0,"streamingTaxed":"Yes"},{"rank":24,"state":"Minnesota","hours":3.79,"totalCost":43.256,"minimumWage":11.41,"streamingTaxed":"Yes"},{"rank":25,"state":"Montana","hours":3.69,"totalCost":40.0,"minimumWage":10.85,"streamingTaxed":"No"},{"rank":26,"state":"New Mexico","hours":3.59,"totalCost":43.068,"minimumWage":12.0,"streamingTaxed":"Yes"},{"rank":27,"state":"South Dakota","hours":3.58,"totalCost":42.444,"minimumWage":11.85,"streamingTaxed":"Yes"},{"rank":28,"state":"Nevada","hours":3.33,"totalCost":40.0,"minimumWage":12.0,"streamingTaxed":"No"},{"rank":29,"state":"Virginia","hours":3.13,"totalCost":40.0,"minimumWage":12.77,"streamingTaxed":"No"},{"rank":30,"state":"Alaska","hours":3.08,"totalCost":40.0,"minimumWage":13.0,"streamingTaxed":"No"},{"rank":31,"state":"Florida","hours":3.07,"totalCost":42.976,"minimumWage":14.0,"streamingTaxed":"Yes"},{"rank":32,"state":"Vermont","hours":2.95,"totalCost":42.556,"minimumWage":14.42,"streamingTaxed":"Yes"},{"rank":33,"state":"Michigan","hours":2.91,"totalCost":40.0,"minimumWage":13.73,"streamingTaxed":"No"},{"rank":34,"state":"Arizona","hours":2.87,"totalCost":43.408,"minimumWage":15.15,"streamingTaxed":"Yes"},{"rank":35,"state":"Colorado","hours":2.85,"totalCost":43.156,"minimumWage":15.16,"streamingTaxed":"Yes"},{"rank":36,"state":"Nebraska","hours":2.85,"totalCost":42.792,"minimumWage":15.0,"streamingTaxed":"Yes"},{"rank":37,"state":"Maryland","hours":2.83,"totalCost":42.4,"minimumWage":15.0,"streamingTaxed":"Yes"},{"rank":38,"state":"Maine","hours":2.79,"totalCost":42.2,"minimumWage":15.1,"streamingTaxed":"Yes"},{"rank":39,"state":"Rhode Island","hours":2.68,"totalCost":42.8,"minimumWage":16.0,"streamingTaxed":"Yes"},{"rank":40,"state":"Illinois","hours":2.67,"totalCost":40.0,"minimumWage":15.0,"streamingTaxed":"No"},{"rank":41,"state":"Massachusetts","hours":2.67,"totalCost":40.0,"minimumWage":15.0,"streamingTaxed":"No"},{"rank":42,"state":"Delaware","hours":2.67,"totalCost":40.0,"minimumWage":15.0,"streamingTaxed":"No"},{"rank":43,"state":"Missouri","hours":2.67,"totalCost":40.0,"minimumWage":15.0,"streamingTaxed":"No"},{"rank":44,"state":"Oregon","hours":2.66,"totalCost":40.0,"minimumWage":15.05,"streamingTaxed":"No"},{"rank":45,"state":"Hawaii","hours":2.61,"totalCost":41.8,"minimumWage":16.0,"streamingTaxed":"Yes"},{"rank":46,"state":"Washington","hours":2.56,"totalCost":43.804,"minimumWage":17.13,"streamingTaxed":"Yes"},{"rank":47,"state":"New Jersey","hours":2.51,"totalCost":40.0,"minimumWage":15.92,"streamingTaxed":"No"},{"rank":48,"state":"Connecticut","hours":2.51,"totalCost":42.54,"minimumWage":16.94,"streamingTaxed":"Yes"},{"rank":49,"state":"New York","hours":2.5,"totalCost":40.0,"minimumWage":16.0,"streamingTaxed":"No"},{"rank":50,"state":"California","hours":2.37,"totalCost":40.0,"minimumWage":16.9,"streamingTaxed":"No"}];
+
+const STATE_CITYSCAPE_PAGES = {
+  "Alabama":"Birmingham, Alabama",
+  "Alaska":"Anchorage, Alaska",
+  "Arizona":"Phoenix, Arizona",
+  "Arkansas":"Little Rock, Arkansas",
+  "California":"Los Angeles",
+  "Colorado":"Denver",
+  "Connecticut":"Hartford, Connecticut",
+  "Delaware":"Wilmington, Delaware",
+  "Florida":"Miami",
+  "Georgia":"Atlanta",
+  "Hawaii":"Honolulu",
+  "Idaho":"Boise, Idaho",
+  "Illinois":"Chicago",
+  "Indiana":"Indianapolis",
+  "Iowa":"Des Moines, Iowa",
+  "Kansas":"Wichita, Kansas",
+  "Kentucky":"Louisville, Kentucky",
+  "Louisiana":"New Orleans",
+  "Maine":"Portland, Maine",
+  "Maryland":"Baltimore",
+  "Massachusetts":"Boston",
+  "Michigan":"Detroit",
+  "Minnesota":"Minneapolis",
+  "Mississippi":"Jackson, Mississippi",
+  "Missouri":"St. Louis",
+  "Montana":"Billings, Montana",
+  "Nebraska":"Omaha, Nebraska",
+  "Nevada":"Las Vegas",
+  "New Hampshire":"Manchester, New Hampshire",
+  "New Jersey":"Jersey City, New Jersey",
+  "New Mexico":"Albuquerque, New Mexico",
+  "New York":"New York City",
+  "North Carolina":"Charlotte, North Carolina",
+  "North Dakota":"Fargo, North Dakota",
+  "Ohio":"Columbus, Ohio",
+  "Oklahoma":"Oklahoma City",
+  "Oregon":"Portland, Oregon",
+  "Pennsylvania":"Philadelphia",
+  "Rhode Island":"Providence, Rhode Island",
+  "South Carolina":"Charleston, South Carolina",
+  "South Dakota":"Sioux Falls, South Dakota",
+  "Tennessee":"Nashville, Tennessee",
+  "Texas":"Austin, Texas",
+  "Utah":"Salt Lake City",
+  "Vermont":"Burlington, Vermont",
+  "Virginia":"Richmond, Virginia",
+  "Washington":"Seattle",
+  "West Virginia":"Charleston, West Virginia",
+  "Wisconsin":"Milwaukee",
+  "Wyoming":"Cheyenne, Wyoming"
+};
+
+const formatMoney = (value) => new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: Number(value) % 1 === 0 ? 0 : 2,
+  maximumFractionDigits: 2
+}).format(Number(value));
+
+const formatHours = (value) => `${Number(value).toFixed(2)} hrs`;
+const maxHours = Math.max(...AN_DATA.map(item => item.hours));
+const avgHours = AN_DATA.reduce((sum, item) => sum + item.hours, 0) / AN_DATA.length;
+
+let currentSort = { key: "rank", direction: "asc" };
+let expanded = false;
+let chartExpanded = false;
+let activeTab = "chart";
+let chartObserver = null;
+
+function populateStateSelect() {
+  const select = document.getElementById("stateSelect");
+  const sorted = [...AN_DATA].sort((a, b) => a.state.localeCompare(b.state));
+  select.innerHTML = sorted.map(item => `<option value="${item.state}">${item.state}</option>`).join("");
+  select.value = "Louisiana";
+  select.addEventListener("change", renderCalculator);
+  renderCalculator();
+}
+
+async function loadStateImage(stateName) {
+  const img = document.getElementById("stateImage");
+  const title = document.getElementById("stateImageTitle");
+  const caption = document.getElementById("stateImageCaption");
+  const cityPage = STATE_CITYSCAPE_PAGES[stateName] || stateName;
+
+  title.textContent = stateName;
+  caption.textContent = "Loading cityscape...";
+
+  const pages = [cityPage, stateName];
+  for (const page of pages) {
+    try {
+      const response = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(page)}`);
+      if (!response.ok) continue;
+      const data = await response.json();
+      const imageUrl = (data.originalimage && data.originalimage.source) || (data.thumbnail && data.thumbnail.source);
+      if (!imageUrl) continue;
+      img.src = imageUrl;
+      img.alt = `${stateName} cityscape from Wikimedia`;
+      caption.textContent = `${cityPage.split(",")[0].trim()} cityscape.`;
+      return;
+    } catch (error) {
+      continue;
+    }
+  }
+
+  img.removeAttribute("src");
+  img.alt = `${stateName} cityscape image unavailable`;
+  caption.textContent = `${stateName} cityscape.`;
+}
+
+function renderCalculator() {
+  const state = document.getElementById("stateSelect").value;
+  const item = AN_DATA.find(row => row.state === state) || AN_DATA[0];
+  const hoursVsAverage = item.hours / avgHours;
+  const avgDelta = Math.abs(item.hours - avgHours);
+  const avgDirection = item.hours >= avgHours ? "above" : "below";
+
+  loadStateImage(item.state);
+
+  document.getElementById("calcResult").innerHTML = `
+    <div class="an-result-card"><span>Work time</span><strong>${formatHours(item.hours)}</strong><small>Estimated time needed in ${item.state}.</small></div>
+    <div class="an-result-card"><span>National rank</span><strong>#${item.rank}</strong><small>Out of all 50 states.</small></div>
+    <div class="an-result-card is-comparison"><span>Compared with U.S. average</span><strong>${hoursVsAverage.toFixed(2)}x<em>national average</em></strong><small>${item.state} is ${avgDelta.toFixed(2)} hrs ${avgDirection} the U.S. average of ${formatHours(avgHours)}.</small></div>
+    <p class="an-calc-sentence">In ${item.state}, a minimum-wage worker would need about ${formatHours(item.hours)} to afford the full World Cup stream.</p>
+  `;
+}
+
+function renderChart(animationMode = "none") {
+  const rows = [...AN_DATA].sort((a, b) => a.rank - b.rank).slice(0, chartExpanded ? AN_DATA.length : 10);
+  const chart = document.getElementById("chartRows");
+  let animatedIndex = 0;
+
+  chart.innerHTML = rows.map((item) => {
+    const pct = Math.max(8, (item.hours / maxHours) * 100);
+    const shouldAnimate =
+      animationMode === "all" ||
+      (animationMode === "new" && item.rank > 10);
+
+    const delay = shouldAnimate ? Math.min(animatedIndex++ * 24, 360) : 0;
+    const animationClass = shouldAnimate ? " is-animating" : "";
+
+    return `
+      <div class="an-bar-row">
+        <div class="an-rank-pill">${item.rank}</div>
+        <div class="an-state-label"><strong>${item.state}</strong><span>${formatMoney(item.minimumWage)}/hr minimum wage</span></div>
+        <div class="an-track" aria-hidden="true"><span class="an-fill${animationClass}" data-width="${pct.toFixed(2)}%" style="--bar-width:${pct.toFixed(2)}%; animation-delay:${delay}ms"></span></div>
+        <div class="an-hours">${item.hours.toFixed(2)}</div>
+      </div>`;
+  }).join("");
+}
+
+function getTableRows() {
+  let rows = [...AN_DATA];
+
+  if (!expanded) {
+    rows = rows.filter(item => item.rank <= 10);
+  }
+
+  const dir = currentSort.direction === "asc" ? 1 : -1;
+  rows.sort((a, b) => {
+    const av = a[currentSort.key];
+    const bv = b[currentSort.key];
+    if (typeof av === "number" && typeof bv === "number") return (av - bv) * dir;
+    return String(av).localeCompare(String(bv)) * dir;
+  });
+
+  return rows;
+}
+
+function renderTable() {
+  const rows = getTableRows();
+  document.getElementById("tableBody").innerHTML = rows.map(item => `
+    <tr>
+      <td class="an-rank-cell">#${item.rank}</td>
+      <td class="an-state-cell"><strong>${item.state}</strong></td>
+      <td class="an-hour-cell">${formatHours(item.hours)}</td>
+      <td>${formatMoney(item.totalCost)}</td>
+      <td>${formatMoney(item.minimumWage)}/hr</td>
+      <td><span class="an-tax-pill">${item.streamingTaxed}</span></td>
+    </tr>
+  `).join("");
+document.getElementById("toggleRows").textContent = expanded ? "Show top 10" : "Show all 50 states";
+}
+
+
+
+
+let chartScrollRevealPlayed = false;
+let chartScrollRevealObserver = null;
+
+function isChartVisibleEnough() {
+  const chart = document.getElementById("chartRows");
+  if (!chart) return false;
+  const rect = chart.getBoundingClientRect();
+  return rect.top < window.innerHeight * 0.88 && rect.bottom > window.innerHeight * 0.12;
+}
+
+function scrollToRankingTop() {
+  const target = document.querySelector('#an-world-cup-streaming #ranking .an-rankings-head') || document.getElementById("ranking");
+  if (!target) return;
+
+  const top = target.getBoundingClientRect().top + window.pageYOffset - 12;
+  window.scrollTo({
+    top,
+    behavior: "smooth"
+  });
+}
+
+function setupOneTimeScrollReveal() {
+  const chart = document.getElementById("chartRows");
+  if (!chart || chartScrollRevealPlayed) return;
+
+  if (chartScrollRevealObserver) {
+    chartScrollRevealObserver.disconnect();
+  }
+
+  const playOnce = () => {
+    if (chartScrollRevealPlayed) return;
+    chartScrollRevealPlayed = true;
+    renderChart("all");
+    if (chartScrollRevealObserver) chartScrollRevealObserver.disconnect();
+  };
+
+  if (isChartVisibleEnough()) {
+    setTimeout(playOnce, 120);
+    return;
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    window.addEventListener("scroll", function fallbackScrollReveal() {
+      if (isChartVisibleEnough()) {
+        window.removeEventListener("scroll", fallbackScrollReveal);
+        playOnce();
+      }
+    }, { passive: true });
+    return;
+  }
+
+  chartScrollRevealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) playOnce();
+    });
+  }, {
+    threshold: 0,
+    rootMargin: "0px 0px -12% 0px"
+  });
+
+  chartScrollRevealObserver.observe(chart);
+}
+
+
+function setupChartToggle() {
+  const button = document.getElementById("toggleChartRows");
+  if (!button) return;
+
+  button.addEventListener("click", () => {
+    const expanding = !chartExpanded;
+    chartExpanded = expanding;
+    button.textContent = chartExpanded ? "Show top 10" : "Show all 50 states";
+    chartScrollRevealPlayed = true;
+    if (chartScrollRevealObserver) chartScrollRevealObserver.disconnect();
+    renderChart(expanding ? "new" : "none");
+
+    if (!expanding) {
+      requestAnimationFrame(() => {
+        scrollToRankingTop();
+      });
+    }
+  });
+}
+
+function setupTabs() {
+  document.querySelectorAll(".an-tab-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      activeTab = button.dataset.tab;
+
+      document.querySelectorAll(".an-tab-btn").forEach(btn => {
+        const selected = btn === button;
+        btn.classList.toggle("is-active", selected);
+        btn.setAttribute("aria-selected", selected ? "true" : "false");
+      });
+
+      document.querySelectorAll(".an-panel").forEach(panel => {
+        panel.classList.toggle("is-active", panel.dataset.panel === activeTab);
+      });
+
+      updateDownloadMenuLabels();
+
+      if (activeTab === "chart") {
+        chartScrollRevealPlayed = true;
+        if (chartScrollRevealObserver) chartScrollRevealObserver.disconnect();
+        renderChart("all");
+      }
+    });
+  });
+}
+
+function setupTable() {
+  const toggleButton = document.getElementById("toggleRows");
+
+  toggleButton.addEventListener("click", () => {
+    const collapsingToTop10 = expanded;
+    expanded = !expanded;
+    renderTable();
+
+    if (collapsingToTop10) {
+      requestAnimationFrame(() => {
+        scrollToRankingTop();
+      });
+    }
+  });
+
+  document.querySelectorAll(".an-table th[data-sort]").forEach(th => {
+    th.addEventListener("click", () => {
+      const key = th.dataset.sort;
+      if (currentSort.key === key) {
+        currentSort.direction = currentSort.direction === "asc" ? "desc" : "asc";
+      } else {
+        currentSort = { key, direction: key === "rank" ? "asc" : "desc" };
+      }
+      renderTable();
+    });
+  });
+}
+
+function setupTableHeaderTooltips() {
+  const tip = document.getElementById("anTableTip");
+  if (!tip) return;
+
+  const tipHead = tip.querySelector(".an-table-tip-head");
+  const tipBody = tip.querySelector(".an-table-tip-body");
+  let activeHeader = null;
+
+  function getHeader(target) {
+    return target && target.closest ? target.closest("#an-world-cup-streaming .an-table th[data-tip]") : null;
+  }
+
+  function placeTip(header) {
+    if (!header) return;
+
+    const rect = header.getBoundingClientRect();
+    const gap = 12;
+
+    tip.style.left = "0px";
+    tip.style.top = "0px";
+    const tipRect = tip.getBoundingClientRect();
+    const tipWidth = tipRect.width || Math.min(320, window.innerWidth - 28);
+    const tipHeight = tipRect.height || 120;
+
+    let left = rect.left + rect.width / 2 - tipWidth / 2;
+    left = Math.max(14, Math.min(left, window.innerWidth - tipWidth - 14));
+
+    const preferredTop = rect.top - tipHeight - gap;
+    const fallbackTop = rect.bottom + gap;
+
+    // Prefer the tooltip above the header. Only flip below when it would
+    // bleed out of the top of the viewport, which happens when the sticky
+    // table header reaches the top while scrolling.
+    const showAbove = preferredTop >= 14;
+    let top = showAbove ? preferredTop : fallbackTop;
+
+    top = Math.max(14, Math.min(top, window.innerHeight - tipHeight - 14));
+
+    tip.style.left = `${left}px`;
+    tip.style.top = `${top}px`;
+    tip.dataset.placement = showAbove ? "top" : "bottom";
+  }
+
+  function showTip(header) {
+    if (!header) return;
+    activeHeader = header;
+    tipHead.textContent = header.getAttribute("data-tip-title") || header.textContent.trim();
+    tipBody.textContent = header.getAttribute("data-tip") || "";
+    tip.setAttribute("aria-hidden", "false");
+    placeTip(header);
+    requestAnimationFrame(() => tip.classList.add("is-showing"));
+  }
+
+  function hideTip() {
+    tip.classList.remove("is-showing");
+    tip.setAttribute("aria-hidden", "true");
+    activeHeader = null;
+  }
+
+  document.addEventListener("pointerover", event => {
+    const header = getHeader(event.target);
+    if (header) showTip(header);
+  });
+
+  document.addEventListener("pointerout", event => {
+    const header = getHeader(event.target);
+    if (!header) return;
+    const nextHeader = getHeader(event.relatedTarget);
+    if (nextHeader !== header) hideTip();
+  });
+
+  document.addEventListener("focusin", event => {
+    const header = getHeader(event.target);
+    if (header) showTip(header);
+  });
+
+  document.addEventListener("focusout", event => {
+    const header = getHeader(event.target);
+    if (header) hideTip();
+  });
+
+  document.addEventListener("click", event => {
+    const header = getHeader(event.target);
+    if (header) {
+      showTip(header);
+      setTimeout(() => {
+        if (activeHeader === header) hideTip();
+      }, 2400);
+    } else if (!tip.contains(event.target)) {
+      hideTip();
+    }
+  });
+
+  document.querySelectorAll("#an-world-cup-streaming .an-table th[data-tip]").forEach(header => {
+    header.setAttribute("tabindex", "0");
+    header.setAttribute("aria-describedby", "anTableTip");
+  });
+
+  window.addEventListener("scroll", () => {
+    if (activeHeader) placeTip(activeHeader);
+  }, true);
+
+  window.addEventListener("resize", () => {
+    if (activeHeader) placeTip(activeHeader);
+  });
+}
+
+
+function updateToggleButtonLabels() {
+  const chartButton = document.getElementById("toggleChartRows");
+  const tableButton = document.getElementById("toggleRows");
+
+  if (chartButton) {
+    chartButton.textContent = chartExpanded ? "Show top 10" : "Show all 50 states";
+  }
+
+  if (tableButton) {
+    tableButton.textContent = expanded ? "Show top 10" : "Show all 50 states";
+  }
+}
+
+function updateDownloadMenuLabels() {
+  const top10Option = document.querySelector('#downloadMenu [data-download-scope="top10"]');
+  const fullOption = document.querySelector('#downloadMenu [data-download-scope="full"]');
+  if (!top10Option || !fullOption) return;
+
+  const viewName = activeTab === "table" ? "table" : "chart";
+  top10Option.textContent = `Download top 10 ${viewName}`;
+  fullOption.textContent = `Download full ${viewName}`;
+}
+
+function setupDownloadMenu() {
+  const toggle = document.getElementById("downloadRanking");
+  const menu = document.getElementById("downloadMenu");
+  if (!toggle || !menu) return;
+
+  const closeMenu = () => {
+    menu.hidden = true;
+    toggle.setAttribute("aria-expanded", "false");
+  };
+
+  const openMenu = () => {
+    updateDownloadMenuLabels();
+    menu.hidden = false;
+    toggle.setAttribute("aria-expanded", "true");
+  };
+
+  toggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (menu.hidden) {
+      openMenu();
+    } else {
+      closeMenu();
+    }
+  });
+
+  menu.querySelectorAll("[data-download-scope]").forEach(option => {
+    option.addEventListener("click", async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const scope = option.getAttribute("data-download-scope") || "top10";
+      closeMenu();
+      await downloadRankingImage(scope);
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!menu.hidden && !menu.contains(event.target) && event.target !== toggle) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+
+  updateDownloadMenuLabels();
+}
+
+function forceFinalChartBars() {
+  document.querySelectorAll("#chartRows .an-fill").forEach(fill => {
+    const target = fill.getAttribute("data-width") || fill.style.getPropertyValue("--bar-width") || "0%";
+    fill.classList.remove("is-animating");
+    fill.style.animation = "none";
+    fill.style.transform = "scaleX(1)";
+    fill.style.setProperty("--bar-width", target);
+  });
+}
+
+function restoreChartBarStyles() {
+  document.querySelectorAll("#chartRows .an-fill").forEach(fill => {
+    fill.style.animation = "";
+    fill.style.transform = "";
+  });
+}
+
+async function downloadRankingImage(scope = "top10") {
+  const asset = document.getElementById("rankingAsset");
+  if (!asset) return;
+
+  const isFullDownload = scope === "full";
+  const previousChartExpanded = chartExpanded;
+  const previousTableExpanded = expanded;
+  const previousActiveTab = activeTab;
+  const kicker = asset.querySelector(".an-kicker");
+  const previousKickerText = kicker ? kicker.textContent : "";
+
+  try {
+    if (activeTab === "chart") {
+      chartExpanded = isFullDownload;
+      renderChart("none");
+      forceFinalChartBars();
+    } else {
+      expanded = isFullDownload;
+      renderTable();
+    }
+
+    updateToggleButtonLabels();
+    updateDownloadMenuLabels();
+
+    if (kicker) {
+      kicker.textContent = isFullDownload ? "All 50 states" : "Top 10";
+    }
+
+    if (!window.html2canvas) {
+      alert("Image export is still loading. Please try again in a moment.");
+      return;
+    }
+
+    asset.classList.add("an-exporting");
+    await new Promise(resolve => setTimeout(resolve, 180));
+
+    const canvas = await html2canvas(asset, {
+      backgroundColor: "#ffffff",
+      scale: Math.min(2, window.devicePixelRatio || 1.5),
+      useCORS: true,
+      allowTaint: true,
+      logging: false,
+      scrollX: 0,
+      scrollY: -window.scrollY,
+      windowWidth: Math.max(document.documentElement.scrollWidth, asset.scrollWidth)
+    });
+
+    const viewName = activeTab === "table" ? "table" : "chart";
+    const scopeName = isFullDownload ? "full" : "top10";
+
+    const link = document.createElement("a");
+    link.download = `vegasinsider-world-cup-streaming-${viewName}-${scopeName}.png`;
+    link.href = canvas.toDataURL("image/png", 0.95);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  } catch (error) {
+    alert("Sorry, the image export could not be created in this browser.");
+  } finally {
+    asset.classList.remove("an-exporting");
+
+    chartExpanded = previousChartExpanded;
+    expanded = previousTableExpanded;
+    activeTab = previousActiveTab;
+
+    if (kicker) {
+      kicker.textContent = previousKickerText || "Top 10";
+    }
+
+    if (activeTab === "chart") {
+      renderChart("none");
+      restoreChartBarStyles();
+    } else {
+      renderTable();
+    }
+
+    updateToggleButtonLabels();
+    updateDownloadMenuLabels();
+  }
+}
+
+
+populateStateSelect();
+renderChart("none");
+setupOneTimeScrollReveal();
+setupTabs();
+setupChartToggle();
+setupTable();
+setupTableHeaderTooltips();
+renderTable();
+setupDownloadMenu();
+updateToggleButtonLabels();
+updateDownloadMenuLabels();
+</script>
+</body>
+</html>
