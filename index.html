@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1618,8 +1619,9 @@
 
   /* Export */
   #an-world-cup-streaming .an-exporting {
-    width: 1200px !important;
-    max-width: 1200px !important;
+    width: 1800px !important;
+    max-width: 1800px !important;
+    background: #ffffff !important;
     box-shadow: none !important;
   }
 
@@ -1635,13 +1637,88 @@
     display: block !important;
   }
 
+  #an-world-cup-streaming .an-exporting .an-rankings-head {
+    min-height: 210px !important;
+    padding: 48px 48px 50px !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-rankings-head .an-kicker {
+    height: 44px !important;
+    padding: 0 18px !important;
+    font-size: 15px !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-rankings-head h2 {
+    max-width: 1460px !important;
+    font-size: 58px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+  }
+
   #an-world-cup-streaming .an-exporting .an-table-scroll,
   #an-world-cup-streaming .an-exporting .an-chart-scroll {
     overflow: visible !important;
   }
 
+  #an-world-cup-streaming .an-exporting .an-chart {
+    padding: 24px !important;
+    gap: 14px !important;
+    border-width: 2px !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-bar-row {
+    grid-template-columns: 80px minmax(240px, .85fr) minmax(520px, 1.7fr) 120px !important;
+    min-height: 78px !important;
+    padding: 10px 18px !important;
+    column-gap: 24px !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-rank-pill {
+    width: 64px !important;
+    height: 60px !important;
+    font-size: 31px !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-state-label strong {
+    font-size: 30px !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-state-label span {
+    font-size: 18px !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-track {
+    height: 48px !important;
+    border-width: 2px !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-hours {
+    font-size: 42px !important;
+  }
+
   #an-world-cup-streaming .an-exporting .an-table {
     min-width: 0 !important;
+    table-layout: fixed !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-table th {
+    padding: 22px 16px !important;
+    font-size: 18px !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-table td {
+    padding: 19px 16px !important;
+    font-size: 18px !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-state-cell strong {
+    font-size: 19px !important;
+  }
+
+  #an-world-cup-streaming .an-exporting .an-caption {
+    margin: 18px 24px 6px !important;
+    font-size: 15px !important;
   }
 
   @media (max-width: 900px) {
@@ -3451,6 +3528,8 @@ async function downloadRankingImage(scope = "top10") {
   const previousActiveTab = activeTab;
   const kicker = asset.querySelector(".an-kicker");
   const previousKickerText = kicker ? kicker.textContent : "";
+  const exportWidth = 1800;
+  const exportScale = 3;
 
   try {
     if (activeTab === "chart") {
@@ -3475,28 +3554,80 @@ async function downloadRankingImage(scope = "top10") {
     }
 
     asset.classList.add("an-exporting");
-    await new Promise(resolve => setTimeout(resolve, 180));
 
+    if (document.fonts && document.fonts.ready) {
+      await document.fonts.ready;
+    }
+
+    await Promise.all(Array.from(asset.querySelectorAll("img")).map(img => {
+      if (img.complete) return Promise.resolve();
+      if (img.decode) return img.decode().catch(() => Promise.resolve());
+      return new Promise(resolve => {
+        img.onload = resolve;
+        img.onerror = resolve;
+      });
+    }));
+
+    await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+
+    const exportHeight = Math.ceil(asset.scrollHeight);
     const canvas = await html2canvas(asset, {
       backgroundColor: "#ffffff",
-      scale: Math.min(2, window.devicePixelRatio || 1.5),
+      scale: exportScale,
       useCORS: true,
-      allowTaint: true,
+      allowTaint: false,
       logging: false,
       scrollX: 0,
       scrollY: -window.scrollY,
-      windowWidth: Math.max(document.documentElement.scrollWidth, asset.scrollWidth)
+      width: exportWidth,
+      height: exportHeight,
+      windowWidth: exportWidth,
+      windowHeight: exportHeight,
+      imageTimeout: 0,
+      onclone: clonedDoc => {
+        const clonedAsset = clonedDoc.getElementById("rankingAsset");
+        if (clonedAsset) {
+          clonedAsset.classList.add("an-exporting");
+          clonedAsset.style.width = `${exportWidth}px`;
+          clonedAsset.style.maxWidth = `${exportWidth}px`;
+        }
+      }
     });
 
     const viewName = activeTab === "table" ? "table" : "chart";
     const scopeName = isFullDownload ? "full" : "top10";
+    const fileName = `actionnetwork-world-cup-streaming-${viewName}-${scopeName}-high-res.png`;
 
     const link = document.createElement("a");
-    link.download = `vegasinsider-world-cup-streaming-${viewName}-${scopeName}.png`;
-    link.href = canvas.toDataURL("image/png", 0.95);
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
+    link.download = fileName;
+
+    if (canvas.toBlob) {
+      await new Promise(resolve => {
+        canvas.toBlob(blob => {
+          if (!blob) {
+            link.href = canvas.toDataURL("image/png");
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            resolve();
+            return;
+          }
+
+          const url = URL.createObjectURL(blob);
+          link.href = url;
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+          resolve();
+        }, "image/png");
+      });
+    } else {
+      link.href = canvas.toDataURL("image/png");
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    }
   } catch (error) {
     alert("Sorry, the image export could not be created in this browser.");
   } finally {
