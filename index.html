@@ -12,36 +12,62 @@
   html,
   body {
     scrollbar-width: thin;
-    scrollbar-color: #00e6a8 #071515;
+    scrollbar-color: #00b889 #ffffff;
   }
 
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
   }
 
   html::-webkit-scrollbar-track,
   body::-webkit-scrollbar-track {
-    background: #071515;
-    border-left: 1px solid rgba(0,230,168,.16);
+    background: #ffffff;
+    border-left: 1px solid #dceee8;
   }
 
   html::-webkit-scrollbar-thumb,
   body::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #00e6a8 0%, #00785f 100%);
-    border: 2px solid #071515;
+    min-height: 52px;
+    background: linear-gradient(180deg, #00e6a8 0%, #00b889 100%);
+    border: 3px solid #ffffff;
     border-radius: 999px;
   }
 
   html::-webkit-scrollbar-thumb:hover,
   body::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #27ffd0 0%, #00a987 100%);
+    background: linear-gradient(180deg, #18f5bf 0%, #009f7d 100%);
+  }
+
+  html::-webkit-scrollbar-button,
+  body::-webkit-scrollbar-button {
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border-left: 1px solid #dceee8;
+  }
+
+  html::-webkit-scrollbar-button:vertical:decrement,
+  body::-webkit-scrollbar-button:vertical:decrement {
+    background:
+      linear-gradient(45deg, transparent 50%, #00b889 50%) 3px 6px / 5px 5px no-repeat,
+      linear-gradient(135deg, #00b889 50%, transparent 50%) 7px 6px / 5px 5px no-repeat,
+      #ffffff;
+  }
+
+  html::-webkit-scrollbar-button:vertical:increment,
+  body::-webkit-scrollbar-button:vertical:increment {
+    background:
+      linear-gradient(135deg, transparent 50%, #00b889 50%) 3px 2px / 5px 5px no-repeat,
+      linear-gradient(45deg, #00b889 50%, transparent 50%) 7px 2px / 5px 5px no-repeat,
+      #ffffff;
   }
 
   html::-webkit-scrollbar-corner,
   body::-webkit-scrollbar-corner {
-    background: #071515;
+    background: #ffffff;
   }
 
 #an-world-cup-streaming {
